@@ -476,9 +476,10 @@ h1 em, h2 em {
 .contributor-card { min-height: 136px; display: flex; flex-direction: column; justify-content: space-between; padding: 18px; border: 1px solid #d9ddd3; border-radius: 4px; background: rgba(255, 255, 255, .5); }
 .contributor-identity { display: flex; align-items: center; gap: 12px; min-width: 0; }
 .contributor-avatar { width: 40px; height: 40px; flex: 0 0 auto; display: grid; place-items: center; border: 1px solid #b9c59f; border-radius: 50%; color: var(--green-dark); background: #e8efd9; font: 11px "SFMono-Regular", Consolas, monospace; }
-.contributor-name-group { min-width: 0; display: flex; flex-direction: column; gap: 5px; }
+.contributor-name-group { min-width: 0; display: flex; flex-direction: column; gap: 3px; }
 .contributor-name-group strong { overflow: hidden; color: var(--ink); font-size: 12px; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
-.contributor-name-group > span { overflow: hidden; color: #849087; font: 10px "SFMono-Regular", Consolas, monospace; text-overflow: ellipsis; white-space: nowrap; }
+.contributor-role { overflow: hidden; color: var(--green-dark); font-size: 9px; font-weight: 650; text-overflow: ellipsis; white-space: nowrap; }
+.contributor-handle { overflow: hidden; color: #849087; font: 9px "SFMono-Regular", Consolas, monospace; text-overflow: ellipsis; white-space: nowrap; }
 .contributor-link,
 .contributors-source a { display: inline-flex; align-items: center; gap: 6px; color: var(--green-dark); text-decoration: none; font-size: 10px; font-weight: 700; }
 .contributor-link { width: fit-content; padding-top: 12px; }

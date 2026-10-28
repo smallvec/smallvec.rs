@@ -1,9 +1,34 @@
 const sponsorUrl = "https://github.com/sponsors/alejandro-vaz";
 
-const coreContributors = [
+const smallvecPeople = [
+  {
+    handle: "alejandro-vaz",
+    name: "Alejandro",
+    role: "Maintainer",
+    initials: "AV",
+    href: sponsorUrl,
+    action: "Sponsor on GitHub",
+  },
+  {
+    handle: "jdm",
+    name: "Josh Bowman-Matthews",
+    role: "Servo project supervisor",
+    initials: "JB",
+    href: "https://github.com/sponsors/jdm",
+    action: "Sponsor on GitHub",
+  },
+  {
+    handle: "mbrubeck",
+    name: "Matt Brubeck",
+    role: "Former maintainer",
+    initials: "MB",
+    href: "https://github.com/mbrubeck",
+    action: "View GitHub profile",
+  },
   {
     handle: "fereidani",
     name: "Khashayar Fereidani",
+    role: "Contributor · Security expert",
     initials: "KF",
     href: "https://github.com/sponsors/fereidani",
     action: "Sponsor on GitHub",
@@ -11,6 +36,7 @@ const coreContributors = [
   {
     handle: "TDecking",
     name: "Tobias Decking",
+    role: "Contributor",
     initials: "TD",
     href: "https://github.com/TDecking",
     action: "View GitHub profile",
@@ -18,6 +44,7 @@ const coreContributors = [
   {
     handle: "bolshoytoster",
     name: "bolshoytoster",
+    role: "Contributor · Issue triage",
     initials: "BT",
     href: "https://github.com/bolshoytoster",
     action: "View GitHub profile",
@@ -25,6 +52,7 @@ const coreContributors = [
   {
     handle: "pedrodesu",
     name: "Pedro Nobre",
+    role: "Contributor",
     initials: "PN",
     href: "https://github.com/pedrodesu",
     action: "View GitHub profile",
@@ -32,6 +60,7 @@ const coreContributors = [
   {
     handle: "GauravPawar101",
     name: "Gaurav Pawar",
+    role: "Contributor · Issue triage",
     initials: "GP",
     href: "https://github.com/GauravPawar101",
     action: "View GitHub profile",
@@ -155,10 +184,11 @@ export default function Home() {
             </div>
             <div className="story-text">
               <p>
-                When previous maintainer Matt could no longer make time for SmallVec,
-                there was no funding in place for ongoing maintenance. The crate went
-                around ten months without proper maintenance. The backlog grew past two
-                years, security issues surfaced, and the API fell further behind <code>Vec</code>.
+                Matt maintained SmallVec before I took over. When he no longer had
+                enough time to continue, there was no funded maintenance plan or backup
+                maintainer to keep the work going. Maintenance slowed for around ten
+                months. During that gap, the backlog grew, security fixes needed
+                attention, and SmallVec’s API fell behind <code>Vec</code> in completeness.
               </p>
               <p>
                 I took over two months ago. I’m working through the backlog and building
@@ -197,19 +227,20 @@ export default function Home() {
         <section className="contributors-section section-wrap" id="contributors">
           <div className="contributors-heading">
             <div>
-              <p className="eyebrow">The people behind v2</p>
-              <h2>Core contributors</h2>
+              <p className="eyebrow">The people involved</p>
+              <h2>Keeping SmallVec moving</h2>
             </div>
-            <p>These contributors are helping advance SmallVec v2. Sponsor them directly where they have GitHub Sponsors, or visit their profiles.</p>
+            <p>Meet the maintainer and contributors advancing SmallVec. Sponsor them where GitHub Sponsors is available, or visit their profiles.</p>
           </div>
           <div className="contributors-grid">
-            {coreContributors.map((contributor) => (
+            {smallvecPeople.map((contributor) => (
               <article className="contributor-card" key={contributor.handle}>
                 <div className="contributor-identity">
                   <span className="contributor-avatar" aria-hidden="true">{contributor.initials}</span>
                   <span className="contributor-name-group">
                     <strong>{contributor.name}</strong>
-                    <span>@{contributor.handle}</span>
+                    <span className="contributor-role">{contributor.role}</span>
+                    <span className="contributor-handle">@{contributor.handle}</span>
                   </span>
                 </div>
                 <a className="contributor-link" href={contributor.href} target="_blank" rel="noreferrer">
@@ -218,7 +249,7 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <p className="contributors-source">Core contributor list from the <a href="https://github.com/servo/rust-smallvec#v2-core-contributors" target="_blank" rel="noreferrer">SmallVec repository README <ArrowUpRight /></a>.</p>
+          <p className="contributors-source">The five v2 contributors are listed in the <a href="https://github.com/servo/rust-smallvec#v2-core-contributors" target="_blank" rel="noreferrer">SmallVec repository README <ArrowUpRight /></a>.</p>
         </section>
 
         <section className="funding-section section-wrap" id="funding">
