@@ -1,5 +1,43 @@
 const sponsorUrl = "https://github.com/sponsors/alejandro-vaz";
 
+const coreContributors = [
+  {
+    handle: "fereidani",
+    name: "Khashayar Fereidani",
+    initials: "KF",
+    href: "https://github.com/sponsors/fereidani",
+    action: "Sponsor on GitHub",
+  },
+  {
+    handle: "TDecking",
+    name: "Tobias Decking",
+    initials: "TD",
+    href: "https://github.com/TDecking",
+    action: "View GitHub profile",
+  },
+  {
+    handle: "bolshoytoster",
+    name: "bolshoytoster",
+    initials: "BT",
+    href: "https://github.com/bolshoytoster",
+    action: "View GitHub profile",
+  },
+  {
+    handle: "pedrodesu",
+    name: "Pedro Nobre",
+    initials: "PN",
+    href: "https://github.com/pedrodesu",
+    action: "View GitHub profile",
+  },
+  {
+    handle: "GauravPawar101",
+    name: "Gaurav Pawar",
+    initials: "GP",
+    href: "https://github.com/GauravPawar101",
+    action: "View GitHub profile",
+  },
+];
+
 function ArrowUpRight() {
   return (
     <svg aria-hidden="true" viewBox="0 0 16 16" fill="none">
@@ -33,6 +71,7 @@ export default function Home() {
         <nav className="header-nav" aria-label="Main navigation">
           <a href="#story">The story</a>
           <a href="#work">Recent work</a>
+          <a href="#contributors">Contributors</a>
           <a href="https://docs.rs/smallvec/latest/smallvec/" target="_blank" rel="noreferrer">
             Docs <ArrowUpRight />
           </a>
@@ -142,13 +181,44 @@ export default function Home() {
             </div>
             <div className="work-details">
               <div className="work-grid">
-                <article className="work-card"><strong>~115</strong><h3>PRs reviewed</h3><p>From 30+ contributors across the community.</p></article>
+                <article className="work-card"><strong>40+</strong><h3>Contributors</h3><p>People brought into SmallVec’s ongoing development.</p></article>
+                <article className="work-card"><strong>&lt;24h</strong><h3>Response time</h3><p>Keeping questions and reviews moving.</p></article>
+                <article className="work-card"><strong>150+</strong><h3>Issues triaged</h3><p>A backlog more than two years old cleared.</p></article>
+                <article className="work-card"><strong>~115</strong><h3>PRs reviewed</h3><p>Contributions from across the community.</p></article>
                 <article className="work-card"><strong>~60</strong><h3>PRs authored &amp; merged</h3><p>Performance, CI, and the v2 architecture.</p></article>
-                <article className="work-card"><strong>150+</strong><h3>Issues triaged</h3><p>A two-year backlog cleared.</p></article>
+                <article className="work-card"><strong>CI + fuzzer</strong><h3>New test infrastructure</h3><p>More coverage and stronger checks.</p></article>
               </div>
+              <p className="release-note"><span className="release-icon">✓</span><span><strong>Security fixes shipped.</strong> Fixed several vulnerabilities and added a new fuzzer alongside new CI.</span></p>
               <p className="release-note"><span className="release-icon">↗</span><span><strong>Releases back on track.</strong> Managed v1.16 and the v2 release series from alpha.13, with around 75M downloads across those releases.</span></p>
             </div>
           </div>
+        </section>
+
+        <section className="contributors-section section-wrap" id="contributors">
+          <div className="contributors-heading">
+            <div>
+              <p className="eyebrow">The people behind v2</p>
+              <h2>Core contributors</h2>
+            </div>
+            <p>These contributors are helping advance SmallVec v2. Sponsor them directly where they have GitHub Sponsors, or visit their profiles.</p>
+          </div>
+          <div className="contributors-grid">
+            {coreContributors.map((contributor) => (
+              <article className="contributor-card" key={contributor.handle}>
+                <div className="contributor-identity">
+                  <span className="contributor-avatar" aria-hidden="true">{contributor.initials}</span>
+                  <span className="contributor-name-group">
+                    <strong>{contributor.name}</strong>
+                    <span>@{contributor.handle}</span>
+                  </span>
+                </div>
+                <a className="contributor-link" href={contributor.href} target="_blank" rel="noreferrer">
+                  {contributor.action} <ArrowUpRight />
+                </a>
+              </article>
+            ))}
+          </div>
+          <p className="contributors-source">Core contributor list from the <a href="https://github.com/servo/rust-smallvec#v2-core-contributors" target="_blank" rel="noreferrer">SmallVec repository README <ArrowUpRight /></a>.</p>
         </section>
 
         <section className="funding-section section-wrap" id="funding">

@@ -463,8 +463,30 @@ h1 em, h2 em {
 .work-card h3 { margin-bottom: 7px; font-size: 12px; font-weight: 700; }
 .work-card p { margin: 0; color: #6d776f; font-size: 10px; line-height: 1.55; }
 .release-note { display: flex; align-items: flex-start; gap: 12px; margin: 21px 0 0; color: #69746c; font-size: 11px; line-height: 1.6; }
+.release-note + .release-note { margin-top: 12px; }
 .release-note strong { color: var(--ink); }
 .release-icon { width: 25px; height: 25px; flex: 0 0 auto; display: grid; place-items: center; border-radius: 50%; color: var(--green-dark); background: var(--green); font-size: 14px; }
+
+.contributors-section { padding-top: 88px; padding-bottom: 6px; }
+.contributors-heading { display: grid; grid-template-columns: 1fr minmax(260px, 370px); align-items: end; gap: 55px; margin-bottom: 30px; }
+.contributors-heading .eyebrow { margin-bottom: 14px; }
+.contributors-heading h2 { font-size: clamp(36px, 4vw, 48px); line-height: 1.05; }
+.contributors-heading > p { margin: 0 0 3px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.contributors-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.contributor-card { min-height: 136px; display: flex; flex-direction: column; justify-content: space-between; padding: 18px; border: 1px solid #d9ddd3; border-radius: 4px; background: rgba(255, 255, 255, .5); }
+.contributor-identity { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.contributor-avatar { width: 40px; height: 40px; flex: 0 0 auto; display: grid; place-items: center; border: 1px solid #b9c59f; border-radius: 50%; color: var(--green-dark); background: #e8efd9; font: 11px "SFMono-Regular", Consolas, monospace; }
+.contributor-name-group { min-width: 0; display: flex; flex-direction: column; gap: 5px; }
+.contributor-name-group strong { overflow: hidden; color: var(--ink); font-size: 12px; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
+.contributor-name-group > span { overflow: hidden; color: #849087; font: 10px "SFMono-Regular", Consolas, monospace; text-overflow: ellipsis; white-space: nowrap; }
+.contributor-link,
+.contributors-source a { display: inline-flex; align-items: center; gap: 6px; color: var(--green-dark); text-decoration: none; font-size: 10px; font-weight: 700; }
+.contributor-link { width: fit-content; padding-top: 12px; }
+.contributor-link svg,
+.contributors-source svg { width: 12px; height: 12px; }
+.contributor-link:hover,
+.contributors-source a:hover { color: #597c32; }
+.contributors-source { display: flex; align-items: center; gap: 4px; margin: 17px 0 0; color: #849087; font-size: 9px; }
 
 .funding-section { padding-top: 95px; padding-bottom: 95px; }
 .funding-card {
@@ -524,6 +546,9 @@ h1 em, h2 em {
   .memory-graphic { padding-top: 38px; }
   .story-content { margin-left: 18%; gap: 50px; }
   .work-inner { gap: 45px; }
+  .work-grid,
+  .contributors-grid { grid-template-columns: repeat(2, 1fr); }
+  .contributors-heading { gap: 32px; }
   .funding-card { gap: 38px; padding: 50px 42px; }
   .stats-inner { grid-template-columns: repeat(4, 1fr); padding-block: 20px; }
   .compiler-note { grid-column: 1 / -1; padding: 12px 0 0; border: 0; }
@@ -563,10 +588,18 @@ h1 em, h2 em {
   .work-inner { grid-template-columns: 1fr; gap: 35px; padding-top: 72px; padding-bottom: 75px; }
   .work-intro > p:last-child { margin-top: 15px; }
   .work-grid { gap: 8px; }
-  .work-card { min-height: 161px; padding: 15px 11px; }
+  .work-card { min-height: 150px; padding: 15px 11px; }
   .work-card > strong { font-size: 27px; margin-bottom: 15px; }
   .work-card h3 { font-size: 11px; }
   .work-card p { font-size: 9px; }
+
+  .contributors-section { padding-top: 70px; }
+  .contributors-heading { grid-template-columns: 1fr; gap: 14px; margin-bottom: 23px; }
+  .contributors-heading h2 { font-size: 40px; }
+  .contributors-grid { grid-template-columns: 1fr; gap: 8px; }
+  .contributor-card { min-height: 82px; flex-direction: row; align-items: center; padding: 13px; }
+  .contributor-link { flex: 0 0 auto; padding-top: 0; margin-left: 10px; font-size: 9px; }
+  .contributors-source { align-items: flex-start; flex-wrap: wrap; line-height: 1.6; }
 
   .funding-section { padding-top: 66px; padding-bottom: 66px; }
   .funding-card { grid-template-columns: 1fr; gap: 31px; padding: 37px 25px 27px; }
