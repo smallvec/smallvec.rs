@@ -398,6 +398,25 @@ h1 em, h2 em {
   align-items: center;
 }
 
+.stats-source {
+  width: min(1160px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 0 0 18px;
+  color: #7b867d;
+  font-size: 9px;
+  line-height: 1.6;
+  text-align: right;
+}
+
+.stats-source a,
+.work-source a,
+.contributors-heading > p a {
+  color: var(--green-dark);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .stat-item {
   min-height: 64px;
   display: flex;
@@ -466,12 +485,14 @@ h1 em, h2 em {
 .release-note + .release-note { margin-top: 12px; }
 .release-note strong { color: var(--ink); }
 .release-icon { width: 25px; height: 25px; flex: 0 0 auto; display: grid; place-items: center; border-radius: 50%; color: var(--green-dark); background: var(--green); font-size: 14px; }
+.work-source { margin: 18px 0 0; color: #7b867d; font-size: 9px; line-height: 1.6; }
 
 .contributors-section { padding-top: 88px; padding-bottom: 6px; }
 .contributors-heading { display: grid; grid-template-columns: 1fr minmax(260px, 370px); align-items: end; gap: 55px; margin-bottom: 30px; }
 .contributors-heading .eyebrow { margin-bottom: 14px; }
 .contributors-heading h2 { font-size: clamp(36px, 4vw, 48px); line-height: 1.05; }
 .contributors-heading > p { margin: 0 0 3px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.contributors-heading > p a { white-space: nowrap; }
 .contributors-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 .contributor-card { min-height: 136px; display: flex; flex-direction: column; justify-content: space-between; padding: 18px; border: 1px solid #d9ddd3; border-radius: 4px; background: rgba(255, 255, 255, .5); }
 .contributor-identity { display: flex; align-items: center; gap: 12px; min-width: 0; }
@@ -532,6 +553,18 @@ h1 em, h2 em {
 .github-handle strong { color: #546159; }
 .funding-decoration { position: absolute; right: 24px; bottom: -111px; color: rgba(214, 243, 106, .06); font-size: 305px; line-height: 1; }
 
+.faq-section { padding-top: 0; padding-bottom: 95px; }
+.faq-inner { width: min(780px, 100%); margin-inline: auto; }
+.faq-section .eyebrow { margin-bottom: 14px; }
+.faq-section h2 { margin-bottom: 28px; font-size: clamp(36px, 4vw, 48px); }
+.faq-item { border-top: 1px solid var(--line); }
+.faq-item:last-child { border-bottom: 1px solid var(--line); }
+.faq-item summary { position: relative; padding: 19px 38px 19px 0; cursor: pointer; color: var(--ink); font-size: 14px; font-weight: 700; list-style: none; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { position: absolute; top: 14px; right: 4px; color: var(--green-dark); content: "+"; font-size: 22px; font-weight: 400; }
+.faq-item[open] summary::after { content: "−"; }
+.faq-item p { max-width: 690px; margin: 0; padding: 0 38px 19px 0; color: var(--muted); font-size: 13px; line-height: 1.75; }
+
 .site-footer { min-height: 93px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--line); }
 .site-footer .wordmark { font-size: 16px; }
 .site-footer .wordmark-icon { width: 19px; height: 19px; }
@@ -553,6 +586,7 @@ h1 em, h2 em {
   .funding-card { gap: 38px; padding: 50px 42px; }
   .stats-inner { grid-template-columns: repeat(4, 1fr); padding-block: 20px; }
   .compiler-note { grid-column: 1 / -1; padding: 12px 0 0; border: 0; }
+  .stats-source { width: min(100% - 40px, 520px); padding-bottom: 17px; text-align: left; }
 }
 
 @media (max-width: 680px) {
@@ -607,6 +641,9 @@ h1 em, h2 em {
   .funding-decoration { right: -35px; bottom: -35px; font-size: 205px; }
   .funding-copy h2 { font-size: 42px; }
   .funding-ask { padding: 23px 20px 19px; }
+
+  .faq-section { padding-bottom: 70px; }
+  .faq-item summary { font-size: 13px; }
 
   .site-footer { min-height: 106px; display: grid; grid-template-columns: 1fr auto; row-gap: 2px; padding-block: 18px; }
   .site-footer p { grid-column: 1 / -1; grid-row: 2; }

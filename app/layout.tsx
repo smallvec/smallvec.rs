@@ -3,16 +3,16 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://smallvec.rs"),
-  title: "SmallVec — Sustain a foundational Rust crate",
+  title: "SmallVec — Fund ten hours a week of maintenance",
   description:
-    "SmallVec is used inside the Rust compiler and depended on by more than 150,000 crates. Help make its maintenance sustainable with recurring support.",
+    "A $249 monthly sponsorship goal would fund ten hours each week for SmallVec maintenance, security fixes, reviews, testing, and releases.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "SmallVec — Sustain a foundational Rust crate",
+    title: "SmallVec — Fund ten hours a week of maintenance",
     description:
-      "A small crate with a big place in Rust. Support the ongoing maintenance of SmallVec.",
+      "Help fund ten hours each week for the maintenance behind SmallVec, used inside the Rust compiler and depended on by more than 150,000 crates.",
     url: "https://smallvec.rs",
     siteName: "SmallVec",
     type: "website",

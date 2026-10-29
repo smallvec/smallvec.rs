@@ -114,20 +114,20 @@ export default function Home() {
         <section className="hero section-wrap" id="top">
           <div className="hero-copy">
             <p className="eyebrow"><span className="status-dot" /> Open source, maintained in the open</p>
-            <h1>A small crate with a big place in Rust. <em>Help keep it healthy.</em></h1>
+            <h1>Help fund ten hours a week of <em>SmallVec maintenance.</em></h1>
             <p className="hero-description">
               SmallVec is used inside the Rust compiler and depended on by more than
-              150,000 crates. After around ten months without regular maintenance, the
-              work is moving again: security fixes, reviews, testing, and releases.
-              Recurring support can help make that progress sustainable.
+              150,000 crates. Reaching the $249 monthly goal would let the maintainer
+              dedicate ten hours each week to maintenance, security fixes, reviews,
+              testing, and releases.
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href={sponsorUrl} target="_blank" rel="noreferrer">
-                <GitHubMark /> Sponsor SmallVec on GitHub <ArrowUpRight />
+                <GitHubMark /> Support SmallVec maintenance <ArrowUpRight />
               </a>
               <a className="text-link" href="#work">See the work in progress <span aria-hidden="true">↓</span></a>
             </div>
-            <p className="goal-note"><span>Next milestone</span> $249 in monthly sponsorship</p>
+            <p className="goal-note"><span>Monthly goal</span> $249 for ten hours of maintenance each week</p>
           </div>
 
           <div className="hero-art" role="img" aria-label="Illustration of SmallVec keeping values inline before growing onto the heap">
@@ -170,6 +170,10 @@ export default function Home() {
             <div className="stat-item"><strong>330<span>M</span></strong><span>downloads in 90 days</span></div>
             <div className="compiler-note"><span className="compiler-mark">R</span><span>Used inside<br /><strong>the Rust compiler</strong></span></div>
           </div>
+          <p className="stats-source">
+            Figures as of October 2026. Download counts: <a href="https://crates.io/crates/smallvec" target="_blank" rel="noreferrer">crates.io</a>.
+            Dependent crate count and ecosystem share: <a href="https://lib.rs/crates/smallvec" target="_blank" rel="noreferrer">lib.rs</a>.
+          </p>
         </section>
 
         <section className="story-section section-wrap" id="story">
@@ -185,18 +189,18 @@ export default function Home() {
             </div>
             <div className="story-text">
               <p>
-                Matt maintained SmallVec before I took over. When he no longer had
-                enough time to continue, there was no funded maintenance plan or backup
-                maintainer. For around ten months, regular maintenance slowed. The
-                backlog grew, security fixes needed attention, and SmallVec’s API fell
-                behind <code>Vec</code> in completeness.
+                I’m Alejandro, SmallVec’s current maintainer. Matt maintained the crate
+                before me. When he no longer had enough time to continue, there was no
+                funded maintenance plan or backup maintainer. For around ten months,
+                regular maintenance slowed. The backlog grew, security fixes needed
+                attention, and SmallVec’s API fell behind <code>Vec</code> in completeness.
               </p>
               <p>
-                I took over two months ago. The work is moving again: issues are being
-                triaged, PRs reviewed, security fixes shipped, and releases managed.
-                There is still a lot to do. I’m working through what accumulated and
-                building a healthier foundation for what comes next. SmallVec’s upkeep
-                should have a sustainable place in the life of the project.
+                I took over two months ago. Since then, issues have been triaged, PRs
+                reviewed, security fixes shipped, and releases managed. There is still
+                a lot to do. I’m working through what accumulated and building a
+                healthier foundation for what comes next. SmallVec’s upkeep should have
+                a sustainable place in the life of the project.
               </p>
               <a className="inline-link" href="https://github.com/servo/rust-smallvec" target="_blank" rel="noreferrer">
                 Follow the repository <ArrowUpRight />
@@ -223,6 +227,9 @@ export default function Home() {
               </div>
               <p className="release-note"><span className="release-icon">✓</span><span><strong>Security fixes shipped.</strong> Several vulnerabilities fixed, with a new fuzzer and CI adding stronger checks.</span></p>
               <p className="release-note"><span className="release-icon">↗</span><span><strong>Releases moving forward.</strong> Managed v1.16 and the v2 release series from alpha.13, with around 75M downloads across those releases.</span></p>
+              <p className="work-source">
+                Repository and maintenance figures as of October 2026, from the <a href="https://github.com/servo/rust-smallvec" target="_blank" rel="noreferrer">SmallVec GitHub repository</a>. Release download counts are from <a href="https://crates.io/crates/smallvec" target="_blank" rel="noreferrer">crates.io</a>.
+              </p>
             </div>
           </div>
         </section>
@@ -230,10 +237,10 @@ export default function Home() {
         <section className="contributors-section section-wrap" id="contributors">
           <div className="contributors-heading">
             <div>
-              <p className="eyebrow">The people involved</p>
-              <h2>A community keeps it moving</h2>
+              <p className="eyebrow">Sponsor an individual contributor</p>
+              <h2>Support a contributor directly</h2>
             </div>
-            <p>SmallVec’s progress comes through code, reviews, issue triage, and testing. Meet the maintainer and contributors advancing it. Sponsor them where GitHub Sponsors is available, or visit their profiles.</p>
+            <p>Use a “Sponsor on GitHub” link to sponsor that contributor directly; profile links simply open their GitHub profile. These individual sponsorships are separate from the SmallVec maintenance goal. To fund that work, <a href="#funding">support the SmallVec maintenance goal</a>.</p>
           </div>
           <div className="contributors-grid">
             {smallvecPeople.map((contributor) => (
@@ -263,16 +270,41 @@ export default function Home() {
               <p>Regular support gives the work that keeps a widely used crate dependable—issue triage, reviews, testing, security fixes, and releases—a planned place in ongoing maintenance.</p>
             </div>
             <div className="funding-ask">
-              <span className="ask-label">NEXT MONTHLY GOAL</span>
+              <span className="ask-label">MONTHLY GOAL</span>
               <div className="ask-amount">$249<span>/ month</span></div>
               <div className="ask-rule" />
-              <p>Every monthly sponsorship helps make that work more dependable. Choose an amount that works for you.</p>
+              <p>Reaching this goal would let the maintainer dedicate ten hours each week to SmallVec maintenance, security fixes, reviews, testing, and releases.</p>
               <a className="button button-light" href={sponsorUrl} target="_blank" rel="noreferrer">
-                <GitHubMark /> Sponsor on GitHub <ArrowUpRight />
+                <GitHubMark /> Support SmallVec maintenance <ArrowUpRight />
               </a>
               <span className="github-handle">Supporting <strong>@alejandro-vaz</strong></span>
             </div>
             <span className="funding-decoration" aria-hidden="true">✳</span>
+          </div>
+        </section>
+
+        <section className="faq-section section-wrap" aria-labelledby="faq-title">
+          <div className="faq-inner">
+            <p className="eyebrow">Before you sponsor</p>
+            <h2 id="faq-title">Questions, answered</h2>
+            <div className="faq-list">
+              <details className="faq-item">
+                <summary>Who receives the money?</summary>
+                <p>GitHub Sponsors sends your sponsorship to Alejandro, SmallVec’s maintainer. It supports his ongoing work maintaining the crate.</p>
+              </details>
+              <details className="faq-item">
+                <summary>Can I give once?</summary>
+                <p>Yes. Choose the one-time option on GitHub Sponsors. Monthly support contributes to the $249 goal for dedicated maintenance time.</p>
+              </details>
+              <details className="faq-item">
+                <summary>What am I funding?</summary>
+                <p>Issue triage, reviews, testing, security fixes, and releases. Reaching the $249 monthly goal would let Alejandro dedicate ten hours each week to this work.</p>
+              </details>
+              <details className="faq-item">
+                <summary>Can sponsorship influence the roadmap?</summary>
+                <p>You’re welcome to share ideas and feedback like anyone in the community. Sponsorship does not buy roadmap control or guaranteed prioritization.</p>
+              </details>
+            </div>
           </div>
         </section>
       </main>
