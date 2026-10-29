@@ -108,7 +108,7 @@ function NavigationLinks({ className }: { className: string }) {
   return (
     <div className={className}>
       {navigationItems.map((item) =>
-        item.external ? (
+        "external" in item ? (
           <a href={item.href} key={item.href} target="_blank" rel="noreferrer">
             {item.label} <ArrowUpRight />
           </a>
