@@ -178,29 +178,31 @@ export default function Home() {
 
         <section className="story-section section-wrap" id="story">
           <div className="section-heading">
-            <p className="eyebrow">Why maintenance matters</p>
-            <h2>A widely used crate needs<br /><em>care it can count on.</em></h2>
+            <p className="eyebrow">How the maintenance gap began</p>
+            <h2>One maintainer ran out of time.<br /><em>SmallVec went dark.</em></h2>
           </div>
           <div className="story-content">
             <div className="story-timeline">
               <span className="timeline-rule" />
               <span className="timeline-dot" />
-              <div><strong>~10 months</strong><span>without regular maintenance</span></div>
+              <div><strong>Nov 2025–Aug 2026</strong><span>the repository was nearly inactive</span></div>
             </div>
             <div className="story-text">
               <p>
-                I’m Alejandro, SmallVec’s current maintainer. Matt maintained the crate
-                before me. When he no longer had enough time to continue, there was no
-                funded maintenance plan or backup maintainer. For around ten months,
-                regular maintenance slowed. The backlog grew, security fixes needed
-                attention, and SmallVec’s API fell behind <code>Vec</code> in completeness.
+                Things were fine while Matt had time to maintain SmallVec. Around 2023,
+                he began having less time. In September 2025, he said, “I can’t anymore.”
+                He finally left in November. The repository effectively went dead.
+                There was no funded maintenance plan or backup maintainer to take over.
+                The backlog grew, security fixes needed attention, and SmallVec’s API
+                fell behind <code>Vec</code> in completeness.
               </p>
               <p>
-                I took over two months ago. Since then, issues have been triaged, PRs
-                reviewed, security fixes shipped, and releases managed. There is still
-                a lot to do. I’m working through what accumulated and building a
-                healthier foundation for what comes next. SmallVec’s upkeep should have
-                a sustainable place in the life of the project.
+                I’m Alejandro, SmallVec’s current maintainer. I took over in August
+                2026, after months of near-total inactivity. Since then, issues have
+                been triaged, PRs reviewed, security fixes shipped, and releases
+                managed. There is still a lot to do. SmallVec’s reach did not come with
+                a funded plan or a backup maintainer. I want to make sure the work
+                doesn’t go dark again.
               </p>
               <a className="inline-link" href="https://github.com/servo/rust-smallvec" target="_blank" rel="noreferrer">
                 Follow the repository <ArrowUpRight />
