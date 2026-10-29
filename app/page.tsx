@@ -1,4 +1,14 @@
 const sponsorUrl = "https://github.com/sponsors/alejandro-vaz";
+const navigationItems = [
+  { label: "Impact", href: "#impact" },
+  { label: "Story", href: "#story" },
+  { label: "Work", href: "#work" },
+  { label: "Goals", href: "#goals" },
+  { label: "People", href: "#contributors" },
+  { label: "Funding", href: "#funding" },
+  { label: "FAQ", href: "#faq" },
+  { label: "Docs", href: "https://docs.rs/smallvec/latest/smallvec/", external: true },
+] as const;
 
 const smallvecPeople = [
   {
@@ -94,6 +104,22 @@ function ArrowUpRight() {
   );
 }
 
+function NavigationLinks({ className }: { className: string }) {
+  return (
+    <div className={className}>
+      {navigationItems.map((item) =>
+        item.external ? (
+          <a href={item.href} key={item.href} target="_blank" rel="noreferrer">
+            {item.label} <ArrowUpRight />
+          </a>
+        ) : (
+          <a href={item.href} key={item.href}>{item.label}</a>
+        ),
+      )}
+    </div>
+  );
+}
+
 function GitHubMark() {
   return (
     <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
@@ -117,14 +143,15 @@ export default function Home() {
         </a>
 
         <nav className="header-nav" aria-label="Main navigation">
-          <a href="#story">The story</a>
-          <a href="#work">Recent work</a>
-          <a href="#contributors">Contributors</a>
-          <a href="https://docs.rs/smallvec/latest/smallvec/" target="_blank" rel="noreferrer">
-            Docs <ArrowUpRight />
-          </a>
+          <NavigationLinks className="header-nav-links" />
+          <details className="header-menu">
+            <summary>Sections</summary>
+            <NavigationLinks className="header-menu-panel" />
+          </details>
           <a className="nav-sponsor" href={sponsorUrl} target="_blank" rel="noreferrer">
-            Sponsor SmallVec <ArrowUpRight />
+            <span className="nav-sponsor-full">Sponsor SmallVec</span>
+            <span className="nav-sponsor-short">Sponsor</span>
+            <ArrowUpRight />
           </a>
         </nav>
       </header>
@@ -181,7 +208,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="stats-strip" aria-label="SmallVec usage statistics">
+        <section className="stats-strip" id="impact" aria-label="SmallVec usage statistics">
           <div className="stats-inner">
             <div className="stat-item"><strong>1.3<span>B</span></strong><span>downloads overall</span></div>
             <div className="stat-item"><strong>150<span>k</span></strong><span>dependent crates</span></div>
@@ -257,7 +284,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="goals-section" aria-labelledby="goals-title">
+        <section className="goals-section" id="goals" aria-labelledby="goals-title">
           <div className="section-wrap goals-inner">
             <div className="goals-heading">
               <p className="eyebrow">Monthly funding goals</p>
@@ -336,10 +363,10 @@ export default function Home() {
                 ))}
               </div>
             </section>
-            <section className="contributor-group" aria-labelledby="contributors-title">
+            <section className="contributor-group" aria-labelledby="core-contributors-title">
               <div className="contributor-group-heading">
-                <h3 id="contributors-title">Contributors</h3>
-                <p>Core contributors, ordered by their areas of responsibility.</p>
+                <h3 id="core-contributors-title">Core contributors</h3>
+                <p>The five v2 core contributors, ordered by their areas of responsibility.</p>
               </div>
               <div className="contributors-grid contributors-grid-community">
                 {contributorPeople.map((contributor) => (
@@ -360,7 +387,7 @@ export default function Home() {
               </div>
             </section>
           </div>
-          <p className="contributors-source">The five v2 contributors are listed in the <a href="https://github.com/servo/rust-smallvec#v2-core-contributors" target="_blank" rel="noreferrer">SmallVec repository README <ArrowUpRight /></a>.</p>
+          <p className="contributors-source">See the v2 core contributor listing in the <a href="https://github.com/servo/rust-smallvec#v2-core-contributors" target="_blank" rel="noreferrer">SmallVec repository README <ArrowUpRight /></a>.</p>
         </section>
 
         <section className="funding-section section-wrap" id="funding">
@@ -384,7 +411,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="faq-section section-wrap" aria-labelledby="faq-title">
+        <section className="faq-section section-wrap" id="faq" aria-labelledby="faq-title">
           <div className="faq-inner">
             <p className="eyebrow">Before you sponsor</p>
             <h2 id="faq-title">Questions, answered</h2>
