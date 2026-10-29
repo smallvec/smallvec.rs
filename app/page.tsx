@@ -265,13 +265,13 @@ export default function Home() {
                 <span className="goal-marker" aria-hidden="true" />
                 <span className="goal-stage">Future goal</span>
                 <h3 className="goal-amount">$1,749<span>/ month</span></h3>
-                <p>Start a feature bounty program.</p>
+                <p>Start a security vulnerability bug bounty program.</p>
               </li>
               <li className="goal-step">
                 <span className="goal-marker" aria-hidden="true" />
                 <span className="goal-stage">Future goal</span>
                 <h3 className="goal-amount">$2,999<span>/ month</span></h3>
-                <p>Start a security vulnerability bug bounty program.</p>
+                <p>Start a feature bounty program.</p>
               </li>
               <li className="goal-step">
                 <span className="goal-marker" aria-hidden="true" />
