@@ -114,15 +114,16 @@ export default function Home() {
         <section className="hero section-wrap" id="top">
           <div className="hero-copy">
             <p className="eyebrow"><span className="status-dot" /> Open source, maintained in the open</p>
-            <h1>SmallVec runs through Rust. <em>Help keep it moving.</em></h1>
+            <h1>A small crate with a big place in Rust. <em>Help keep it healthy.</em></h1>
             <p className="hero-description">
-              It powers the compiler and more than 150,000 crates. Keeping a foundation
-              this widely used secure, current, and reliable takes steady work—and that
-              work deserves support.
+              SmallVec is used inside the Rust compiler and depended on by more than
+              150,000 crates. After around ten months without regular maintenance, the
+              work is moving again: security fixes, reviews, testing, and releases.
+              Recurring support can help make that progress sustainable.
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href={sponsorUrl} target="_blank" rel="noreferrer">
-                <GitHubMark /> Fund SmallVec on GitHub <ArrowUpRight />
+                <GitHubMark /> Sponsor SmallVec on GitHub <ArrowUpRight />
               </a>
               <a className="text-link" href="#work">See the work in progress <span aria-hidden="true">↓</span></a>
             </div>
@@ -173,8 +174,8 @@ export default function Home() {
 
         <section className="story-section section-wrap" id="story">
           <div className="section-heading">
-            <p className="eyebrow">A crate this important needs a plan</p>
-            <h2>Essential infrastructure<br /><em>shouldn’t depend on spare time.</em></h2>
+            <p className="eyebrow">Why maintenance matters</p>
+            <h2>A widely used crate needs<br /><em>care it can count on.</em></h2>
           </div>
           <div className="story-content">
             <div className="story-timeline">
@@ -186,14 +187,16 @@ export default function Home() {
               <p>
                 Matt maintained SmallVec before I took over. When he no longer had
                 enough time to continue, there was no funded maintenance plan or backup
-                maintainer to keep the work going. Maintenance slowed for around ten
-                months. During that gap, the backlog grew, security fixes needed
-                attention, and SmallVec’s API fell behind <code>Vec</code> in completeness.
+                maintainer. For around ten months, regular maintenance slowed. The
+                backlog grew, security fixes needed attention, and SmallVec’s API fell
+                behind <code>Vec</code> in completeness.
               </p>
               <p>
-                I took over two months ago. I’m working through the backlog and building
-                a healthier foundation for SmallVec’s next chapter. Now I’m looking for
-                a way to make that work sustainable long term.
+                I took over two months ago. The work is moving again: issues are being
+                triaged, PRs reviewed, security fixes shipped, and releases managed.
+                There is still a lot to do. I’m working through what accumulated and
+                building a healthier foundation for what comes next. SmallVec’s upkeep
+                should have a sustainable place in the life of the project.
               </p>
               <a className="inline-link" href="https://github.com/servo/rust-smallvec" target="_blank" rel="noreferrer">
                 Follow the repository <ArrowUpRight />
@@ -206,20 +209,20 @@ export default function Home() {
           <div className="section-wrap work-inner">
             <div className="work-intro">
               <p className="eyebrow">Since taking over</p>
-              <h2>Momentum is back.<br /><em>Let’s make it last.</em></h2>
-              <p>Two months of hands-on maintenance—and a lot of work still ahead.</p>
+              <h2>The work is moving.<br /><em>Let’s keep it moving.</em></h2>
+              <p>In two months, the backlog was cleared, releases moved forward, and testing grew stronger. Here’s what that work looks like.</p>
             </div>
             <div className="work-details">
               <div className="work-grid">
-                <article className="work-card"><strong>40+</strong><h3>Contributors</h3><p>People brought into SmallVec’s ongoing development.</p></article>
+                <article className="work-card"><strong>40+</strong><h3>Contributors</h3><p>People now contributing to SmallVec’s ongoing development.</p></article>
                 <article className="work-card"><strong>&lt;24h</strong><h3>Response time</h3><p>Keeping questions and reviews moving.</p></article>
-                <article className="work-card"><strong>150+</strong><h3>Issues triaged</h3><p>A backlog more than two years old cleared.</p></article>
+                <article className="work-card"><strong>150+</strong><h3>Issues triaged</h3><p>Cleared a backlog that had grown for more than two years.</p></article>
                 <article className="work-card"><strong>~115</strong><h3>PRs reviewed</h3><p>Contributions from across the community.</p></article>
                 <article className="work-card"><strong>~60</strong><h3>PRs authored &amp; merged</h3><p>Performance, CI, and the v2 architecture.</p></article>
                 <article className="work-card"><strong>CI + fuzzer</strong><h3>New test infrastructure</h3><p>More coverage and stronger checks.</p></article>
               </div>
-              <p className="release-note"><span className="release-icon">✓</span><span><strong>Security fixes shipped.</strong> Fixed several vulnerabilities and added a new fuzzer alongside new CI.</span></p>
-              <p className="release-note"><span className="release-icon">↗</span><span><strong>Releases back on track.</strong> Managed v1.16 and the v2 release series from alpha.13, with around 75M downloads across those releases.</span></p>
+              <p className="release-note"><span className="release-icon">✓</span><span><strong>Security fixes shipped.</strong> Several vulnerabilities fixed, with a new fuzzer and CI adding stronger checks.</span></p>
+              <p className="release-note"><span className="release-icon">↗</span><span><strong>Releases moving forward.</strong> Managed v1.16 and the v2 release series from alpha.13, with around 75M downloads across those releases.</span></p>
             </div>
           </div>
         </section>
@@ -228,9 +231,9 @@ export default function Home() {
           <div className="contributors-heading">
             <div>
               <p className="eyebrow">The people involved</p>
-              <h2>Keeping SmallVec moving</h2>
+              <h2>A community keeps it moving</h2>
             </div>
-            <p>Meet the maintainer and contributors advancing SmallVec. Sponsor them where GitHub Sponsors is available, or visit their profiles.</p>
+            <p>SmallVec’s progress comes through code, reviews, issue triage, and testing. Meet the maintainer and contributors advancing it. Sponsor them where GitHub Sponsors is available, or visit their profiles.</p>
           </div>
           <div className="contributors-grid">
             {smallvecPeople.map((contributor) => (
@@ -256,14 +259,14 @@ export default function Home() {
           <div className="funding-card">
             <div className="funding-copy">
               <p className="eyebrow"><span className="status-dot" /> Help keep SmallVec healthy</p>
-              <h2>Make room for<br /><em>the work behind the crate.</em></h2>
-              <p>Recurring support helps make issue triage, reviews, testing, and releases a dependable part of the job—not just the time left over.</p>
+              <h2>Make the work behind<br /><em>SmallVec sustainable.</em></h2>
+              <p>Regular support gives the work that keeps a widely used crate dependable—issue triage, reviews, testing, security fixes, and releases—a planned place in ongoing maintenance.</p>
             </div>
             <div className="funding-ask">
               <span className="ask-label">NEXT MONTHLY GOAL</span>
               <div className="ask-amount">$249<span>/ month</span></div>
               <div className="ask-rule" />
-              <p>Every sponsorship helps move the goal forward. Choose an amount that works for you.</p>
+              <p>Every monthly sponsorship helps make that work more dependable. Choose an amount that works for you.</p>
               <a className="button button-light" href={sponsorUrl} target="_blank" rel="noreferrer">
                 <GitHubMark /> Sponsor on GitHub <ArrowUpRight />
               </a>
