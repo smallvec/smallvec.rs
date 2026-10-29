@@ -189,12 +189,15 @@ export default function Home() {
             </div>
             <div className="story-text">
               <p>
-                Things were fine while Matt had time to maintain SmallVec. Around 2023,
-                he began having less time. In September 2025, he said, “I can’t anymore.”
-                He finally left in November. The repository effectively went dead.
-                There was no funded maintenance plan or backup maintainer to take over.
-                The backlog grew, security fixes needed attention, and SmallVec’s API
-                fell behind <code>Vec</code> in completeness.
+                Matt had less time to maintain SmallVec starting around 2023. In
+                September 2025, he <a href="https://github.com/servo/rust-smallvec/issues/395" target="_blank" rel="noreferrer">asked for another active maintainer</a>,
+                explaining that he had not been able to give the crate the time it
+                deserved and that some pull requests were long delayed. He planned to
+                keep maintaining it until he could hand it off. From November 2025 to
+                August 2026, the repository was nearly inactive. There was no funded
+                maintenance plan or backup maintainer to take over. The backlog grew,
+                security fixes needed attention, and SmallVec’s API fell behind <code>Vec</code>
+                in completeness.
               </p>
               <p>
                 I’m Alejandro, SmallVec’s current maintainer. I took over in August
@@ -223,8 +226,7 @@ export default function Home() {
                 <article className="work-card"><strong>40+</strong><h3>Contributors</h3><p>People now contributing to SmallVec’s ongoing development.</p></article>
                 <article className="work-card"><strong>&lt;24h</strong><h3>Response time</h3><p>Keeping questions and reviews moving.</p></article>
                 <article className="work-card"><strong>150+</strong><h3>Issues triaged</h3><p>Cleared a backlog that had grown for more than two years.</p></article>
-                <article className="work-card"><strong>~115</strong><h3>PRs reviewed</h3><p>Contributions from across the community.</p></article>
-                <article className="work-card"><strong>~60</strong><h3>PRs authored &amp; merged</h3><p>Performance, CI, and the v2 architecture.</p></article>
+                <article className="work-card"><strong>180+</strong><h3>PRs merged</h3><p>Total since taking over.</p></article>
                 <article className="work-card"><strong>CI + fuzzer</strong><h3>New test infrastructure</h3><p>More coverage and stronger checks.</p></article>
               </div>
               <p className="release-note"><span className="release-icon">✓</span><span><strong>Security fixes shipped.</strong> Several vulnerabilities fixed, with a new fuzzer and CI adding stronger checks.</span></p>
