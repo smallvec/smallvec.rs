@@ -234,6 +234,53 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="goals-section" aria-labelledby="goals-title">
+          <div className="section-wrap goals-inner">
+            <div className="goals-heading">
+              <p className="eyebrow">Monthly funding goals</p>
+              <h2 id="goals-title">What each goal <em>makes possible.</em></h2>
+            </div>
+            <ol className="goals-timeline" aria-label="SmallVec monthly sponsorship milestones">
+              <li className="goal-step goal-step-current">
+                <span className="goal-marker" aria-hidden="true" />
+                <span className="goal-stage">Current goal</span>
+                <h3 className="goal-amount">$249<span>/ month</span></h3>
+                <p>10 hours of maintenance work each week.</p>
+              </li>
+              <li className="goal-step">
+                <span className="goal-marker" aria-hidden="true" />
+                <span className="goal-stage">Next milestone</span>
+                <h3 className="goal-amount">$499<span>/ month</span></h3>
+                <p>Afford a second maintainer.</p>
+              </li>
+              <li className="goal-step">
+                <span className="goal-marker" aria-hidden="true" />
+                <span className="goal-stage">Future goal</span>
+                <h3 className="goal-amount">$999<span>/ month</span></h3>
+                <p>Improve work conditions for both maintainers.</p>
+              </li>
+              <li className="goal-step">
+                <span className="goal-marker" aria-hidden="true" />
+                <span className="goal-stage">Future goal</span>
+                <h3 className="goal-amount">$1,749<span>/ month</span></h3>
+                <p>Start a feature bounty program.</p>
+              </li>
+              <li className="goal-step">
+                <span className="goal-marker" aria-hidden="true" />
+                <span className="goal-stage">Future goal</span>
+                <h3 className="goal-amount">$2,999<span>/ month</span></h3>
+                <p>Start a security vulnerability bug bounty program.</p>
+              </li>
+              <li className="goal-step">
+                <span className="goal-marker" aria-hidden="true" />
+                <span className="goal-stage">Future goal</span>
+                <h3 className="goal-amount">$4,999<span>/ month</span></h3>
+                <p>Even better maintenance, up to 15 hours per week for each maintainer.</p>
+              </li>
+            </ol>
+          </div>
+        </section>
+
         <section className="contributors-section section-wrap" id="contributors">
           <div className="contributors-heading">
             <div>
