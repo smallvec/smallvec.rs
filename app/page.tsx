@@ -8,6 +8,8 @@ const smallvecPeople = [
     initials: "AV",
     href: sponsorUrl,
     action: "Sponsor on GitHub",
+    group: "leadership",
+    responsibility: "maintainer",
   },
   {
     handle: "jdm",
@@ -16,6 +18,8 @@ const smallvecPeople = [
     initials: "JB",
     href: "https://github.com/sponsors/jdm",
     action: "Sponsor on GitHub",
+    group: "leadership",
+    responsibility: "project-supervisor",
   },
   {
     handle: "mbrubeck",
@@ -24,6 +28,8 @@ const smallvecPeople = [
     initials: "MB",
     href: "https://github.com/mbrubeck",
     action: "View GitHub profile",
+    group: "leadership",
+    responsibility: "former-maintainer",
   },
   {
     handle: "fereidani",
@@ -32,14 +38,8 @@ const smallvecPeople = [
     initials: "KF",
     href: "https://github.com/sponsors/fereidani",
     action: "Sponsor on GitHub",
-  },
-  {
-    handle: "TDecking",
-    name: "Tobias Decking",
-    role: "Contributor",
-    initials: "TD",
-    href: "https://github.com/TDecking",
-    action: "View GitHub profile",
+    group: "contributors",
+    responsibility: "security",
   },
   {
     handle: "bolshoytoster",
@@ -48,14 +48,8 @@ const smallvecPeople = [
     initials: "BT",
     href: "https://github.com/bolshoytoster",
     action: "View GitHub profile",
-  },
-  {
-    handle: "pedrodesu",
-    name: "Pedro Nobre",
-    role: "Contributor",
-    initials: "PN",
-    href: "https://github.com/pedrodesu",
-    action: "View GitHub profile",
+    group: "contributors",
+    responsibility: "triage",
   },
   {
     handle: "GauravPawar101",
@@ -64,8 +58,33 @@ const smallvecPeople = [
     initials: "GP",
     href: "https://github.com/GauravPawar101",
     action: "View GitHub profile",
+    group: "contributors",
+    responsibility: "triage",
+  },
+  {
+    handle: "TDecking",
+    name: "Tobias Decking",
+    role: "Contributor",
+    initials: "TD",
+    href: "https://github.com/TDecking",
+    action: "View GitHub profile",
+    group: "contributors",
+    responsibility: "contributor",
+  },
+  {
+    handle: "pedrodesu",
+    name: "Pedro Nobre",
+    role: "Contributor",
+    initials: "PN",
+    href: "https://github.com/pedrodesu",
+    action: "View GitHub profile",
+    group: "contributors",
+    responsibility: "contributor",
   },
 ];
+
+const leadershipPeople = smallvecPeople.filter((person) => person.group === "leadership");
+const contributorPeople = smallvecPeople.filter((person) => person.group === "contributors");
 
 function ArrowUpRight() {
   return (
@@ -288,27 +307,58 @@ export default function Home() {
         <section className="contributors-section section-wrap" id="contributors">
           <div className="contributors-heading">
             <div>
-              <p className="eyebrow">Sponsor an individual contributor</p>
-              <h2>Support a contributor directly</h2>
+              <p className="eyebrow">Individual sponsorships</p>
+              <h2>Support the people behind SmallVec</h2>
             </div>
-            <p>Use a “Sponsor on GitHub” link to sponsor that contributor directly; profile links simply open their GitHub profile. These individual sponsorships are separate from the SmallVec maintenance goal. To fund that work, <a href="#funding">support the SmallVec maintenance goal</a>.</p>
+            <p>Use a “Sponsor on GitHub” link to sponsor that person directly; profile links simply open their GitHub profile. These individual sponsorships are separate from the SmallVec maintenance goal. To fund that work, <a href="#funding">support the SmallVec maintenance goal</a>.</p>
           </div>
-          <div className="contributors-grid">
-            {smallvecPeople.map((contributor) => (
-              <article className="contributor-card" key={contributor.handle}>
-                <div className="contributor-identity">
-                  <span className="contributor-avatar" aria-hidden="true">{contributor.initials}</span>
-                  <span className="contributor-name-group">
-                    <strong>{contributor.name}</strong>
-                    <span className="contributor-role">{contributor.role}</span>
-                    <span className="contributor-handle">@{contributor.handle}</span>
-                  </span>
-                </div>
-                <a className="contributor-link" href={contributor.href} target="_blank" rel="noreferrer">
-                  {contributor.action} <ArrowUpRight />
-                </a>
-              </article>
-            ))}
+          <div className="contributor-groups">
+            <section className="contributor-group" aria-labelledby="leadership-title">
+              <div className="contributor-group-heading">
+                <h3 id="leadership-title">Maintainers &amp; project leadership</h3>
+                <p>Current maintainer, Servo project supervisor, and former maintainer.</p>
+              </div>
+              <div className="contributors-grid contributors-grid-leadership">
+                {leadershipPeople.map((contributor) => (
+                  <article className={`contributor-card contributor-card-${contributor.responsibility}`} key={contributor.handle}>
+                    <div className="contributor-identity">
+                      <span className="contributor-avatar" aria-hidden="true">{contributor.initials}</span>
+                      <span className="contributor-name-group">
+                        <strong>{contributor.name}</strong>
+                        <span className="contributor-role">{contributor.role}</span>
+                        <span className="contributor-handle">@{contributor.handle}</span>
+                      </span>
+                    </div>
+                    <a className="contributor-link" href={contributor.href} target="_blank" rel="noreferrer">
+                      {contributor.action} <ArrowUpRight />
+                    </a>
+                  </article>
+                ))}
+              </div>
+            </section>
+            <section className="contributor-group" aria-labelledby="contributors-title">
+              <div className="contributor-group-heading">
+                <h3 id="contributors-title">Contributors</h3>
+                <p>Core contributors, ordered by their areas of responsibility.</p>
+              </div>
+              <div className="contributors-grid contributors-grid-community">
+                {contributorPeople.map((contributor) => (
+                  <article className={`contributor-card contributor-card-${contributor.responsibility}`} key={contributor.handle}>
+                    <div className="contributor-identity">
+                      <span className="contributor-avatar" aria-hidden="true">{contributor.initials}</span>
+                      <span className="contributor-name-group">
+                        <strong>{contributor.name}</strong>
+                        <span className="contributor-role">{contributor.role}</span>
+                        <span className="contributor-handle">@{contributor.handle}</span>
+                      </span>
+                    </div>
+                    <a className="contributor-link" href={contributor.href} target="_blank" rel="noreferrer">
+                      {contributor.action} <ArrowUpRight />
+                    </a>
+                  </article>
+                ))}
+              </div>
+            </section>
           </div>
           <p className="contributors-source">The five v2 contributors are listed in the <a href="https://github.com/servo/rust-smallvec#v2-core-contributors" target="_blank" rel="noreferrer">SmallVec repository README <ArrowUpRight /></a>.</p>
         </section>
