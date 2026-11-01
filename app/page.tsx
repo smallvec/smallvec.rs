@@ -401,6 +401,14 @@ export default function Home() {
               <span className="ask-label">MONTHLY GOAL</span>
               <div className="ask-amount">$249<span>/ month</span></div>
               <div className="ask-rule" />
+              <div className="sponsor-benefits">
+                <h3>Sponsor benefits</h3>
+                <ul>
+                  <li>Logo on the SmallVec README</li>
+                  <li>Priority support</li>
+                  <li>Monthly email updates</li>
+                </ul>
+              </div>
               <p>Reaching this goal would let the maintainer dedicate ten hours each week to SmallVec maintenance, security fixes, reviews, testing, and releases.</p>
               <a className="button button-light" href={sponsorUrl} target="_blank" rel="noreferrer">
                 <GitHubMark /> Support SmallVec maintenance <ArrowUpRight />
@@ -430,7 +438,7 @@ export default function Home() {
               </details>
               <details className="faq-item">
                 <summary>Can sponsorship influence the roadmap?</summary>
-                <p>You’re welcome to share ideas and feedback like anyone in the community. Sponsorship does not buy roadmap control or guaranteed prioritization.</p>
+                <p>Sponsors receive priority support for questions, but roadmap decisions stay maintainer-led. Sponsorship does not buy roadmap control or guaranteed prioritization of feature requests.</p>
               </details>
             </div>
           </div>
