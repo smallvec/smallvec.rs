@@ -1,8 +1,7 @@
 const sponsorUrl = "https://github.com/sponsors/alejandro-vaz";
 const navigationItems = [
   { label: "Impact", href: "#impact" },
-  { label: "Crates", href: "#crates" },
-  { label: "Products", href: "#products" },
+  { label: "Uses", href: "#uses" },
   { label: "Story", href: "#story" },
   { label: "Work", href: "#work" },
   { label: "Goals", href: "#goals" },
@@ -216,7 +215,6 @@ export default function Home() {
             <div className="stat-item"><strong>150<span>k</span></strong><span>dependent crates</span></div>
             <div className="stat-item"><strong>40<span>%</span></strong><span>of the Rust ecosystem</span></div>
             <div className="stat-item"><strong>330<span>M</span></strong><span>downloads in 90 days</span></div>
-            <div className="compiler-note"><span className="compiler-mark">R</span><span>Used inside<br /><strong>the Rust compiler</strong></span></div>
           </div>
           <p className="stats-source">
             Figures as of October 2026. Download counts: <a href="https://crates.io/crates/smallvec" target="_blank" rel="noreferrer">crates.io</a>.
@@ -224,36 +222,57 @@ export default function Home() {
           </p>
         </section>
 
-        <section className="use-section use-section-products" id="products" aria-labelledby="products-title">
+        <section className="use-section use-section-highlight" id="uses" aria-labelledby="uses-title">
           <div className="section-wrap use-inner">
             <div className="use-heading">
               <div>
-                <p className="eyebrow">Open source at scale</p>
-                <h2 id="products-title">Inside Android and Chromium</h2>
+                <p className="eyebrow">Across the Rust ecosystem</p>
+                <h2 id="uses-title">Where SmallVec is used</h2>
               </div>
-              <p>SmallVec is part of the Rust code included in these widely used products.</p>
+              <p>SmallVec is used directly in major Rust software and reaches many more projects through shared libraries and framework dependencies.</p>
             </div>
             <div className="use-grid">
               <article className="use-card">
-                <span className="use-mark use-mark-android" aria-hidden="true">A</span>
+                <span className="use-mark" aria-hidden="true">R</span>
                 <div className="use-card-copy">
-                  <span className="use-category">Mobile platform</span>
-                  <h3>Android</h3>
-                  <p>The Android source tree includes SmallVec in its Rust crate collection.</p>
-                  <a className="use-link" href="https://android.googlesource.com/platform/external/rust/crates/smallvec/" target="_blank" rel="noreferrer">
-                    View Android source <ArrowUpRight />
+                  <span className="use-category">Compiler</span>
+                  <h3>Rust compiler</h3>
+                  <p><code>rustc_arena</code> uses SmallVec to collect values before storing them in the compiler’s arena.</p>
+                  <a className="use-link" href="https://github.com/rust-lang/rust/blob/main/compiler/rustc_arena/src/lib.rs" target="_blank" rel="noreferrer">
+                    View Rust source <ArrowUpRight />
                   </a>
                 </div>
               </article>
               <article className="use-card">
-                <span className="use-mark use-mark-chromium" aria-hidden="true">C</span>
+                <span className="use-mark" aria-hidden="true">A</span>
                 <div className="use-card-copy">
-                  <span className="use-category">Web browser</span>
-                  <h3>Chromium</h3>
-                  <p>Chromium vendors SmallVec among its Rust third-party crates.</p>
-                  <a className="use-link" href="https://chromium.googlesource.com/chromium/src/+/refs/heads/main/third_party/rust/smallvec/" target="_blank" rel="noreferrer">
-                    View Chromium source <ArrowUpRight />
-                  </a>
+                  <span className="use-category">Platforms and browsers</span>
+                  <h3>Android &amp; Chromium</h3>
+                  <p>Android uses SmallVec through libquiche; Chromium’s Rust text shaping code uses it in harfrust.</p>
+                  <div className="use-links">
+                    <a className="use-link" href="https://android.googlesource.com/platform/external/rust/crates/smallvec/+/8ae8fd457012fe96106f1d6628321e7ca0e3de7d" target="_blank" rel="noreferrer">
+                      Android source <ArrowUpRight />
+                    </a>
+                    <a className="use-link" href="https://chromium.googlesource.com/chromium/src/+/fb4e6cbe1ec82809d230820432f8770e7cad50bb/third_party/rust/chromium_crates_io/vendor/harfrust-v0_14/src/language.rs" target="_blank" rel="noreferrer">
+                      Chromium source <ArrowUpRight />
+                    </a>
+                  </div>
+                </div>
+              </article>
+              <article className="use-card">
+                <span className="use-mark" aria-hidden="true">H</span>
+                <div className="use-card-copy">
+                  <span className="use-category">Web servers &amp; concurrency</span>
+                  <h3>Rust’s shared infrastructure</h3>
+                  <p>Hyper uses SmallVec and powers many Rust web frameworks, carrying it into their dependency trees. <code>parking_lot_core</code> also depends on SmallVec.</p>
+                  <div className="use-links">
+                    <a className="use-link" href="https://crates.io/crates/hyper" target="_blank" rel="noreferrer">
+                      Hyper crate <ArrowUpRight />
+                    </a>
+                    <a className="use-link" href="https://crates.io/crates/parking_lot_core" target="_blank" rel="noreferrer">
+                      parking_lot_core <ArrowUpRight />
+                    </a>
+                  </div>
                 </div>
               </article>
             </div>
@@ -482,41 +501,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="use-section" id="crates" aria-labelledby="crates-title">
-          <div className="section-wrap use-inner">
-            <div className="use-heading">
-              <div>
-                <p className="eyebrow">Across the Rust ecosystem</p>
-                <h2 id="crates-title">Crates that use SmallVec</h2>
-              </div>
-              <p>Because Hyper is used by many Rust web servers, SmallVec can be part of their dependency trees too. Through parking_lot_core, it also supports low-level concurrency primitives used across Rust software.</p>
-            </div>
-            <div className="use-grid">
-              <article className="use-card">
-                <span className="use-mark" aria-hidden="true">H</span>
-                <div className="use-card-copy">
-                  <span className="use-category">HTTP library</span>
-                  <h3>hyper</h3>
-                  <p>Uses SmallVec for HTTP/1 header parsing buffers.</p>
-                  <a className="use-link" href="https://crates.io/crates/hyper" target="_blank" rel="noreferrer">
-                    View crate <ArrowUpRight />
-                  </a>
-                </div>
-              </article>
-              <article className="use-card">
-                <span className="use-mark" aria-hidden="true">P</span>
-                <div className="use-card-copy">
-                  <span className="use-category">Synchronization</span>
-                  <h3>parking_lot_core</h3>
-                  <p>The low-level core crate behind Rust’s parking_lot synchronization primitives.</p>
-                  <a className="use-link" href="https://crates.io/crates/parking_lot_core" target="_blank" rel="noreferrer">
-                    View crate <ArrowUpRight />
-                  </a>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
       </main>
 
       <footer className="site-footer section-wrap">
