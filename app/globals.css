@@ -446,6 +446,17 @@ h1 em, h2 em {
 .stat-item strong span { font-size: 20px; }
 .stat-item > span { color: #6c776e; font-size: 10px; }
 
+.endorsement-section { background: #eef0e8; border-bottom: 1px solid #dfe2d9; }
+.endorsement { display: grid; grid-template-columns: 1fr auto; margin-top: 0; margin-bottom: 0; padding-top: 42px; padding-bottom: 45px; }
+.endorsement .eyebrow { grid-column: 1 / -1; margin-bottom: 16px; }
+.endorsement blockquote { grid-column: 1 / -1; max-width: 960px; margin: 0; padding-left: 22px; border-left: 2px solid var(--orange); color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: clamp(16px, 1.6vw, 19px); line-height: 1.58; letter-spacing: -.25px; }
+.endorsement blockquote p { margin: 0; }
+.endorsement blockquote p + p { margin-top: 12px; }
+.endorsement blockquote a { color: var(--green-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.endorsement figcaption { grid-column: 2; display: flex; flex-direction: column; align-items: flex-end; gap: 4px; margin-top: 19px; text-align: right; }
+.endorsement cite { font-size: 12px; font-style: normal; font-weight: 750; }
+.endorsement figcaption span { color: var(--muted); font-size: 10px; }
+
 .use-section { padding-block: 48px; }
 .use-section-highlight { background: var(--paper-deep); border-block: 1px solid #e2e4db; }
 .use-inner { display: grid; gap: 25px; }
@@ -694,6 +705,8 @@ h1 em, h2 em {
   .stat-item { min-height: 79px; padding-left: 16px; }
   .stat-item:nth-child(odd) { padding-left: 0; border-left: 0; }
   .stat-item strong { font-size: 26px; }
+  .endorsement { padding-block: 34px 36px; }
+  .endorsement figcaption { grid-column: 1 / -1; align-items: flex-start; text-align: left; }
   .story-section { padding-top: 62px; padding-bottom: 65px; }
   .section-heading h2,
   .work-intro h2,
