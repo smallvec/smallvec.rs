@@ -211,7 +211,7 @@ export default function Home() {
 
         <section className="stats-strip" id="impact" aria-label="SmallVec usage statistics">
           <div className="stats-inner">
-            <div className="stat-item"><strong>1.3<span>B</span></strong><span>downloads overall</span></div>
+            <div className="stat-item"><strong>1.4<span>B</span></strong><span>downloads overall</span></div>
             <div className="stat-item"><strong>150<span>k</span></strong><span>dependent crates</span></div>
             <div className="stat-item"><strong>40<span>%</span></strong><span>of the Rust ecosystem</span></div>
             <div className="stat-item"><strong>330<span>M</span></strong><span>downloads in 90 days</span></div>
@@ -264,7 +264,7 @@ export default function Home() {
                 <div className="use-card-copy">
                   <span className="use-category">Web servers &amp; concurrency</span>
                   <h3>Rust’s shared infrastructure</h3>
-                  <p>Hyper uses SmallVec and powers many Rust web frameworks, carrying it into their dependency trees. <code>parking_lot_core</code> also depends on SmallVec.</p>
+                  <p>SmallVec is a foundational crate across Rust’s web-server ecosystem: Hyper uses it directly, while shared concurrency infrastructure like <code>parking_lot_core</code> depends on it too. It often reaches server applications through these shared dependency layers.</p>
                   <div className="use-links">
                     <a className="use-link" href="https://crates.io/crates/hyper" target="_blank" rel="noreferrer">
                       Hyper crate <ArrowUpRight />
@@ -328,8 +328,8 @@ export default function Home() {
               <div className="work-grid">
                 <article className="work-card"><strong>40+</strong><h3>Contributors</h3><p>People now contributing to SmallVec’s ongoing development.</p></article>
                 <article className="work-card"><strong>&lt;24h</strong><h3>Response time</h3><p>Keeping questions and reviews moving.</p></article>
-                <article className="work-card"><strong>200</strong><h3>Issues triaged</h3><p>Cleared a backlog that had grown for more than two years.</p></article>
-                <article className="work-card"><strong>200</strong><h3>PRs merged</h3><p>Total since taking over.</p></article>
+                <article className="work-card"><strong>~200</strong><h3>Issues triaged</h3><p>Cleared a backlog that had grown for more than two years.</p></article>
+                <article className="work-card"><strong>~200</strong><h3>PRs merged</h3><p>Total since taking over.</p></article>
                 <article className="work-card"><strong>CI + fuzzer</strong><h3>New test infrastructure</h3><p>More coverage and stronger checks.</p></article>
               </div>
               <p className="release-note"><span className="release-icon">✓</span><span><strong>Security fixes shipped.</strong> Several vulnerabilities fixed, with a new fuzzer and CI adding stronger checks.</span></p>
