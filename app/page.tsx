@@ -224,42 +224,6 @@ export default function Home() {
           </p>
         </section>
 
-        <section className="use-section" id="crates" aria-labelledby="crates-title">
-          <div className="section-wrap use-inner">
-            <div className="use-heading">
-              <div>
-                <p className="eyebrow">Across the Rust ecosystem</p>
-                <h2 id="crates-title">Crates that use SmallVec</h2>
-              </div>
-              <p>Because Hyper is used by many Rust web servers, SmallVec can be part of their dependency trees too. Through parking_lot_core, it also supports low-level concurrency primitives used across Rust software.</p>
-            </div>
-            <div className="use-grid">
-              <article className="use-card">
-                <span className="use-mark" aria-hidden="true">H</span>
-                <div className="use-card-copy">
-                  <span className="use-category">HTTP library</span>
-                  <h3>hyper</h3>
-                  <p>Uses SmallVec for HTTP/1 header parsing buffers.</p>
-                  <a className="use-link" href="https://github.com/hyperium/hyper/blob/master/src/proto/h1/role.rs" target="_blank" rel="noreferrer">
-                    View source <ArrowUpRight />
-                  </a>
-                </div>
-              </article>
-              <article className="use-card">
-                <span className="use-mark" aria-hidden="true">P</span>
-                <div className="use-card-copy">
-                  <span className="use-category">Synchronization</span>
-                  <h3>parking_lot_core</h3>
-                  <p>The low-level core crate behind Rust’s parking_lot synchronization primitives.</p>
-                  <a className="use-link" href="https://crates.io/crates/parking_lot_core" target="_blank" rel="noreferrer">
-                    View crate <ArrowUpRight />
-                  </a>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
-
         <section className="use-section use-section-products" id="products" aria-labelledby="products-title">
           <div className="section-wrap use-inner">
             <div className="use-heading">
@@ -514,6 +478,42 @@ export default function Home() {
                 <summary>Can sponsorship influence the roadmap?</summary>
                 <p>Sponsors receive priority support for questions, but roadmap decisions stay maintainer-led. Sponsorship does not buy roadmap control or guaranteed prioritization of feature requests.</p>
               </details>
+            </div>
+          </div>
+        </section>
+
+        <section className="use-section" id="crates" aria-labelledby="crates-title">
+          <div className="section-wrap use-inner">
+            <div className="use-heading">
+              <div>
+                <p className="eyebrow">Across the Rust ecosystem</p>
+                <h2 id="crates-title">Crates that use SmallVec</h2>
+              </div>
+              <p>Because Hyper is used by many Rust web servers, SmallVec can be part of their dependency trees too. Through parking_lot_core, it also supports low-level concurrency primitives used across Rust software.</p>
+            </div>
+            <div className="use-grid">
+              <article className="use-card">
+                <span className="use-mark" aria-hidden="true">H</span>
+                <div className="use-card-copy">
+                  <span className="use-category">HTTP library</span>
+                  <h3>hyper</h3>
+                  <p>Uses SmallVec for HTTP/1 header parsing buffers.</p>
+                  <a className="use-link" href="https://github.com/hyperium/hyper/blob/master/src/proto/h1/role.rs" target="_blank" rel="noreferrer">
+                    View source <ArrowUpRight />
+                  </a>
+                </div>
+              </article>
+              <article className="use-card">
+                <span className="use-mark" aria-hidden="true">P</span>
+                <div className="use-card-copy">
+                  <span className="use-category">Synchronization</span>
+                  <h3>parking_lot_core</h3>
+                  <p>The low-level core crate behind Rust’s parking_lot synchronization primitives.</p>
+                  <a className="use-link" href="https://crates.io/crates/parking_lot_core" target="_blank" rel="noreferrer">
+                    View crate <ArrowUpRight />
+                  </a>
+                </div>
+              </article>
             </div>
           </div>
         </section>
