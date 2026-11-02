@@ -309,8 +309,8 @@ export default function Home() {
               <div className="work-grid">
                 <article className="work-card"><strong>40+</strong><h3>Contributors</h3><p>People now contributing to SmallVec’s ongoing development.</p></article>
                 <article className="work-card"><strong>&lt;24h</strong><h3>Response time</h3><p>Keeping questions and reviews moving.</p></article>
-                <article className="work-card"><strong>150+</strong><h3>Issues triaged</h3><p>Cleared a backlog that had grown for more than two years.</p></article>
-                <article className="work-card"><strong>180+</strong><h3>PRs merged</h3><p>Total since taking over.</p></article>
+                <article className="work-card"><strong>200</strong><h3>Issues triaged</h3><p>Cleared a backlog that had grown for more than two years.</p></article>
+                <article className="work-card"><strong>200</strong><h3>PRs merged</h3><p>Total since taking over.</p></article>
                 <article className="work-card"><strong>CI + fuzzer</strong><h3>New test infrastructure</h3><p>More coverage and stronger checks.</p></article>
               </div>
               <p className="release-note"><span className="release-icon">✓</span><span><strong>Security fixes shipped.</strong> Several vulnerabilities fixed, with a new fuzzer and CI adding stronger checks.</span></p>
@@ -498,8 +498,8 @@ export default function Home() {
                   <span className="use-category">HTTP library</span>
                   <h3>hyper</h3>
                   <p>Uses SmallVec for HTTP/1 header parsing buffers.</p>
-                  <a className="use-link" href="https://github.com/hyperium/hyper/blob/master/src/proto/h1/role.rs" target="_blank" rel="noreferrer">
-                    View source <ArrowUpRight />
+                  <a className="use-link" href="https://crates.io/crates/hyper" target="_blank" rel="noreferrer">
+                    View crate <ArrowUpRight />
                   </a>
                 </div>
               </article>
