@@ -1,6 +1,8 @@
 const sponsorUrl = "https://github.com/sponsors/alejandro-vaz";
 const navigationItems = [
   { label: "Impact", href: "#impact" },
+  { label: "Crates", href: "#crates" },
+  { label: "Products", href: "#products" },
   { label: "Story", href: "#story" },
   { label: "Work", href: "#work" },
   { label: "Goals", href: "#goals" },
@@ -220,6 +222,78 @@ export default function Home() {
             Figures as of October 2026. Download counts: <a href="https://crates.io/crates/smallvec" target="_blank" rel="noreferrer">crates.io</a>.
             Dependent crate count and ecosystem share: <a href="https://lib.rs/crates/smallvec" target="_blank" rel="noreferrer">lib.rs</a>.
           </p>
+        </section>
+
+        <section className="use-section" id="crates" aria-labelledby="crates-title">
+          <div className="section-wrap use-inner">
+            <div className="use-heading">
+              <div>
+                <p className="eyebrow">Across the Rust ecosystem</p>
+                <h2 id="crates-title">Crates that use SmallVec</h2>
+              </div>
+              <p>Because Hyper is used by many Rust web servers, SmallVec can be part of their dependency trees too. Through parking_lot_core, it also supports low-level concurrency primitives used across Rust software.</p>
+            </div>
+            <div className="use-grid">
+              <article className="use-card">
+                <span className="use-mark" aria-hidden="true">H</span>
+                <div className="use-card-copy">
+                  <span className="use-category">HTTP library</span>
+                  <h3>hyper</h3>
+                  <p>Uses SmallVec for HTTP/1 header parsing buffers.</p>
+                  <a className="use-link" href="https://github.com/hyperium/hyper/blob/master/src/proto/h1/role.rs" target="_blank" rel="noreferrer">
+                    View source <ArrowUpRight />
+                  </a>
+                </div>
+              </article>
+              <article className="use-card">
+                <span className="use-mark" aria-hidden="true">P</span>
+                <div className="use-card-copy">
+                  <span className="use-category">Synchronization</span>
+                  <h3>parking_lot_core</h3>
+                  <p>The low-level core crate behind Rust’s parking_lot synchronization primitives.</p>
+                  <a className="use-link" href="https://crates.io/crates/parking_lot_core" target="_blank" rel="noreferrer">
+                    View crate <ArrowUpRight />
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section className="use-section use-section-products" id="products" aria-labelledby="products-title">
+          <div className="section-wrap use-inner">
+            <div className="use-heading">
+              <div>
+                <p className="eyebrow">Open source at scale</p>
+                <h2 id="products-title">Inside Android and Chromium</h2>
+              </div>
+              <p>SmallVec is part of the Rust code included in these widely used products.</p>
+            </div>
+            <div className="use-grid">
+              <article className="use-card">
+                <span className="use-mark use-mark-android" aria-hidden="true">A</span>
+                <div className="use-card-copy">
+                  <span className="use-category">Mobile platform</span>
+                  <h3>Android</h3>
+                  <p>The Android source tree includes SmallVec in its Rust crate collection.</p>
+                  <a className="use-link" href="https://android.googlesource.com/platform/external/rust/crates/smallvec/" target="_blank" rel="noreferrer">
+                    View Android source <ArrowUpRight />
+                  </a>
+                </div>
+              </article>
+              <article className="use-card">
+                <span className="use-mark use-mark-chromium" aria-hidden="true">C</span>
+                <div className="use-card-copy">
+                  <span className="use-category">Web browser</span>
+                  <h3>Chromium</h3>
+                  <p>Chromium vendors SmallVec among its Rust third-party crates.</p>
+                  <a className="use-link" href="https://chromium.googlesource.com/chromium/src/+/refs/heads/main/third_party/rust/smallvec/" target="_blank" rel="noreferrer">
+                    View Chromium source <ArrowUpRight />
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
         </section>
 
         <section className="story-section section-wrap" id="story">
