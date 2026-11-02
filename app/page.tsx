@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const sponsorUrl = "https://github.com/sponsors/alejandro-vaz";
 const navigationItems = [
   { label: "Impact", href: "#impact" },
@@ -233,7 +235,9 @@ export default function Home() {
             </div>
             <div className="use-grid">
               <article className="use-card">
-                <span className="use-mark" aria-hidden="true">R</span>
+                <div className="use-logo-row" aria-hidden="true">
+                  <Image src="/rust.svg" alt="" width={42} height={42} />
+                </div>
                 <div className="use-card-copy">
                   <span className="use-category">Compiler</span>
                   <h3>Rust compiler</h3>
@@ -244,7 +248,10 @@ export default function Home() {
                 </div>
               </article>
               <article className="use-card">
-                <span className="use-mark" aria-hidden="true">A</span>
+                <div className="use-logo-row use-logo-row-pair" aria-hidden="true">
+                  <Image src="/android.svg" alt="" width={28} height={28} />
+                  <Image src="/chromium.svg" alt="" width={28} height={28} />
+                </div>
                 <div className="use-card-copy">
                   <span className="use-category">Platforms and browsers</span>
                   <h3>Android &amp; Chromium</h3>
@@ -260,17 +267,17 @@ export default function Home() {
                 </div>
               </article>
               <article className="use-card">
-                <span className="use-mark" aria-hidden="true">H</span>
+                <div className="use-logo-row use-logo-row-hyper" aria-hidden="true">
+                  <Image src="/rust.svg" alt="" width={36} height={36} />
+                  <span>hyper</span>
+                </div>
                 <div className="use-card-copy">
-                  <span className="use-category">Web servers &amp; concurrency</span>
-                  <h3>Rust’s shared infrastructure</h3>
-                  <p>SmallVec is a foundational crate across Rust’s web-server ecosystem: Hyper uses it directly, while shared concurrency infrastructure like <code>parking_lot_core</code> depends on it too. It often reaches server applications through these shared dependency layers.</p>
+                  <span className="use-category">Rust web servers</span>
+                  <h3>Across the web stack</h3>
+                  <p>SmallVec is used by most of Rust’s web-server ecosystem. Hyper depends on it directly and powers many of the servers and frameworks behind Rust web apps.</p>
                   <div className="use-links">
                     <a className="use-link" href="https://crates.io/crates/hyper" target="_blank" rel="noreferrer">
                       Hyper crate <ArrowUpRight />
-                    </a>
-                    <a className="use-link" href="https://crates.io/crates/parking_lot_core" target="_blank" rel="noreferrer">
-                      parking_lot_core <ArrowUpRight />
                     </a>
                   </div>
                 </div>
