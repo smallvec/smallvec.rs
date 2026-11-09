@@ -1,6 +1,7 @@
 import Image from "next/image";
 
-const sponsorUrl = "https://github.com/sponsors/alejandro-vaz";
+const smallvecSponsorUrl = "https://github.com/sponsors/smallvec";
+const alejandroSponsorUrl = "https://github.com/sponsors/alejandro-vaz";
 const navigationItems = [
   { label: "Impact", href: "#impact" },
   { label: "Uses", href: "#uses" },
@@ -19,7 +20,7 @@ const smallvecPeople = [
     name: "Alejandro",
     role: "Maintainer",
     initials: "AV",
-    href: sponsorUrl,
+    href: alejandroSponsorUrl,
     action: "Sponsor on GitHub",
     group: "leadership",
     responsibility: "maintainer",
@@ -151,7 +152,7 @@ export default function Home() {
             <summary>Sections</summary>
             <NavigationLinks className="header-menu-panel" />
           </details>
-          <a className="nav-sponsor" href={sponsorUrl} target="_blank" rel="noreferrer">
+          <a className="nav-sponsor" href={smallvecSponsorUrl} target="_blank" rel="noreferrer">
             <span className="nav-sponsor-full">Sponsor SmallVec</span>
             <span className="nav-sponsor-short">Sponsor</span>
             <ArrowUpRight />
@@ -168,10 +169,11 @@ export default function Home() {
               SmallVec is used inside the Rust compiler and depended on by more than
               150,000 crates. Reaching the $249 monthly goal would let the maintainer
               dedicate ten hours each week to maintenance, security fixes, reviews,
-              testing, and releases.
+              testing, and releases. One-time sponsorships are appreciated too and
+              help sustain this work.
             </p>
             <div className="hero-actions">
-              <a className="button button-primary" href={sponsorUrl} target="_blank" rel="noreferrer">
+              <a className="button button-primary" href={smallvecSponsorUrl} target="_blank" rel="noreferrer">
                 <GitHubMark /> Support SmallVec maintenance <ArrowUpRight />
               </a>
               <a className="text-link" href="#work">See the work in progress <span aria-hidden="true">↓</span></a>
@@ -477,7 +479,7 @@ export default function Home() {
             <div className="funding-copy">
               <p className="eyebrow"><span className="status-dot" /> Help keep SmallVec healthy</p>
               <h2>Make the work behind<br /><em>SmallVec sustainable.</em></h2>
-              <p>Regular support gives the work that keeps a widely used crate dependable—issue triage, reviews, testing, security fixes, and releases—a planned place in ongoing maintenance.</p>
+              <p>Monthly support gives the work that keeps a widely used crate dependable—issue triage, reviews, testing, security fixes, and releases—a planned place in ongoing maintenance. One-time sponsorships are appreciated too.</p>
             </div>
             <div className="funding-ask">
               <span className="ask-label">MONTHLY GOAL</span>
@@ -492,10 +494,10 @@ export default function Home() {
                 </ul>
               </div>
               <p>Reaching this goal would let the maintainer dedicate ten hours each week to SmallVec maintenance, security fixes, reviews, testing, and releases.</p>
-              <a className="button button-light" href={sponsorUrl} target="_blank" rel="noreferrer">
+              <a className="button button-light" href={smallvecSponsorUrl} target="_blank" rel="noreferrer">
                 <GitHubMark /> Support SmallVec maintenance <ArrowUpRight />
               </a>
-              <span className="github-handle">Supporting <strong>@alejandro-vaz</strong></span>
+              <span className="github-handle">Supporting <strong>the SmallVec organization</strong></span>
             </div>
             <span className="funding-decoration" aria-hidden="true">✳</span>
           </div>
@@ -508,11 +510,11 @@ export default function Home() {
             <div className="faq-list">
               <details className="faq-item">
                 <summary>Who receives the money?</summary>
-                <p>GitHub Sponsors sends your sponsorship to Alejandro, SmallVec’s maintainer. It supports his ongoing work maintaining the crate.</p>
+                <p>Your sponsorship goes to the SmallVec organization through GitHub Sponsors and supports the crate’s ongoing maintenance. Alejandro leads this work as SmallVec’s maintainer.</p>
               </details>
               <details className="faq-item">
                 <summary>Can I give once?</summary>
-                <p>Yes. Choose the one-time option on GitHub Sponsors. Monthly support contributes to the $249 goal for dedicated maintenance time.</p>
+                <p>Yes—one-time sponsorships are appreciated. Choose the one-time option on GitHub Sponsors; monthly support contributes to the $249 goal for dedicated maintenance time.</p>
               </details>
               <details className="faq-item">
                 <summary>What am I funding?</summary>
