@@ -218,7 +218,7 @@ export default function Home() {
             <div className="stat-item"><strong>1.4<span>B</span></strong><span>downloads overall</span></div>
             <div className="stat-item"><strong>150<span>k</span></strong><span>dependent crates</span></div>
             <div className="stat-item"><strong>40<span>%</span></strong><span>of the Rust ecosystem</span></div>
-            <div className="stat-item"><strong>330<span>M</span></strong><span>downloads in 90 days</span></div>
+            <div className="stat-item"><strong>370<span>M</span></strong><span>downloads in 90 days</span></div>
           </div>
           <p className="stats-source">
             Figures as of October 2026. Download counts: <a href="https://crates.io/crates/smallvec" target="_blank" rel="noreferrer">crates.io</a>.
