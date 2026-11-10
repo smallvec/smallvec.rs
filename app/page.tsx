@@ -181,54 +181,9 @@ export default function Home() {
             <p className="goal-note"><span>Monthly goal</span> $249 for ten hours of maintenance each week</p>
           </div>
 
-          <div className="hero-art" role="img" aria-label="Illustration of SmallVec keeping values inline before growing onto the heap">
-            <div className="art-topline">
-              <span>SMALLVEC&lt;[U8; 4]&gt;</span>
-              <span className="art-live"><i /> INLINE FIRST</span>
-            </div>
-            <div className="memory-graphic">
-              <div className="memory-label">STACK <span>01—04</span></div>
-              <div className="memory-cells" aria-label="Four values stored inline">
-                <span className="memory-cell filled">0A</span>
-                <span className="memory-cell filled">1F</span>
-                <span className="memory-cell filled">2C</span>
-                <span className="memory-cell filled">3B</span>
-              </div>
-              <div className="inline-caption"><span className="caption-line" /> kept close, no heap allocation</div>
-              <div className="growth-line"><span>capacity reached</span><i /><span>grows when needed</span></div>
-              <div className="heap-box">
-                <div className="memory-label">HEAP <span>ON DEMAND</span></div>
-                <div className="heap-content">
-                  <span className="heap-cell">4D</span>
-                  <span className="heap-cell">5E</span>
-                  <span className="heap-copy">extra values<br />live here</span>
-                  <svg className="heap-spark" aria-hidden="true" viewBox="0 0 84 60" fill="none">
-                    <path d="M2 49h20l10-35 12 27 10-19 9 17h19" stroke="currentColor" strokeWidth="1.5" />
-                    <path d="M76 34l6 5-6 5" stroke="currentColor" strokeWidth="1.5" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div className="art-footer"><span>SMALL FOOTPRINT</span><span className="art-star">✳</span><span>ROOM TO GROW</span></div>
-          </div>
-        </section>
-
-        <section className="stats-strip" id="impact" aria-label="SmallVec usage statistics">
-          <div className="stats-inner">
-            <div className="stat-item"><strong>1.4<span>B</span></strong><span>downloads overall</span></div>
-            <div className="stat-item"><strong>150<span>k</span></strong><span>dependent crates</span></div>
-            <div className="stat-item"><strong>40<span>%</span></strong><span>of the Rust ecosystem</span></div>
-            <div className="stat-item"><strong>370<span>M</span></strong><span>downloads in 90 days</span></div>
-          </div>
-          <p className="stats-source">
-            Figures as of October 2026. Download counts: <a href="https://crates.io/crates/smallvec" target="_blank" rel="noreferrer">crates.io</a>.
-            Dependent crate count and ecosystem share: <a href="https://lib.rs/crates/smallvec" target="_blank" rel="noreferrer">lib.rs</a>.
-          </p>
-        </section>
-
-        <section className="endorsement-section" aria-label="Rust Foundation endorsement">
-          <figure className="endorsement section-wrap">
-            <p className="eyebrow">From the Rust Foundation funding team</p>
+          <figure className="hero-quote">
+            <span className="hero-quote-mark" aria-hidden="true">“</span>
+            <p className="hero-quote-label">From the Rust Foundation funding team</p>
             <blockquote>
               <p>
                 SmallVec is amongst the 30 most downloaded crates on <a href="https://crates.io/" target="_blank" rel="noreferrer">crates.io</a>. It implements a very useful data structure, which we use in many places in the Rust compiler to improve its performance.
@@ -242,6 +197,19 @@ export default function Home() {
               <span>Funding team, Rust Foundation</span>
             </figcaption>
           </figure>
+        </section>
+
+        <section className="stats-strip" id="impact" aria-label="SmallVec usage statistics">
+          <div className="stats-inner">
+            <div className="stat-item"><strong>1.4<span>B</span></strong><span>downloads overall</span></div>
+            <div className="stat-item"><strong>150<span>k</span></strong><span>dependent crates</span></div>
+            <div className="stat-item"><strong>40<span>%</span></strong><span>of the Rust ecosystem</span></div>
+            <div className="stat-item"><strong>370<span>M</span></strong><span>downloads in 90 days</span></div>
+          </div>
+          <p className="stats-source">
+            Figures as of October 2026. Download counts: <a href="https://crates.io/crates/smallvec" target="_blank" rel="noreferrer">crates.io</a>.
+            Dependent crate count and ecosystem share: <a href="https://lib.rs/crates/smallvec" target="_blank" rel="noreferrer">lib.rs</a>.
+          </p>
         </section>
 
         <section className="use-section use-section-highlight" id="uses" aria-labelledby="uses-title">
