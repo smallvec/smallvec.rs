@@ -4,16 +4,8 @@ import Link from "next/link";
 const smallvecSponsorUrl = "https://github.com/sponsors/smallvec";
 const alejandroSponsorUrl = "https://github.com/sponsors/alejandro-vaz";
 const navigationItems = [
-  { label: "Impact", href: "#impact" },
-  { label: "Uses", href: "#uses" },
-  { label: "Story", href: "#story" },
-  { label: "Work", href: "#work" },
-  { label: "Goals", href: "#goals" },
-  { label: "People", href: "#contributors" },
-  { label: "Funding", href: "#funding" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Blog", href: "/blog", route: true },
-  { label: "Docs", href: "https://docs.rs/smallvec/latest/smallvec/", external: true },
+  { label: "Home", href: "/" },
+  { label: "Blog", href: "/blog" },
 ] as const;
 
 const smallvecPeople = [
@@ -113,17 +105,7 @@ function ArrowUpRight() {
 function NavigationLinks({ className }: { className: string }) {
   return (
     <div className={className}>
-      {navigationItems.map((item) =>
-        "external" in item ? (
-          <a href={item.href} key={item.href} target="_blank" rel="noreferrer">
-            {item.label} <ArrowUpRight />
-          </a>
-        ) : "route" in item ? (
-          <Link href={item.href} key={item.href}>{item.label}</Link>
-        ) : (
-          <a href={item.href} key={item.href}>{item.label}</a>
-        ),
-      )}
+      {navigationItems.map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}
     </div>
   );
 }
@@ -140,7 +122,7 @@ export default function Home() {
   return (
     <>
       <header className="site-header">
-        <a className="wordmark" href="#top" aria-label="SmallVec home">
+        <Link className="wordmark" href="/" aria-label="SmallVec home">
           <span className="wordmark-icon" aria-hidden="true">
             <span />
             <span />
@@ -148,20 +130,16 @@ export default function Home() {
             <span />
           </span>
           <span>smallvec</span>
-        </a>
+        </Link>
 
         <nav className="header-nav" aria-label="Main navigation">
           <NavigationLinks className="header-nav-links" />
-          <details className="header-menu">
-            <summary>Sections</summary>
-            <NavigationLinks className="header-menu-panel" />
-          </details>
-          <a className="nav-sponsor" href={smallvecSponsorUrl} target="_blank" rel="noreferrer">
-            <span className="nav-sponsor-full">Sponsor SmallVec</span>
-            <span className="nav-sponsor-short">Sponsor</span>
-            <ArrowUpRight />
-          </a>
         </nav>
+        <a className="nav-sponsor" href={smallvecSponsorUrl} target="_blank" rel="noreferrer">
+          <span className="nav-sponsor-full">Sponsor SmallVec</span>
+          <span className="nav-sponsor-short">Sponsor</span>
+          <ArrowUpRight />
+        </a>
       </header>
 
       <main>
@@ -180,7 +158,7 @@ export default function Home() {
               <a className="button button-primary" href={smallvecSponsorUrl} target="_blank" rel="noreferrer">
                 <GitHubMark /> Support SmallVec maintenance <ArrowUpRight />
               </a>
-              <a className="text-link" href="#work">See the work in progress <span aria-hidden="true">↓</span></a>
+              <Link className="text-link" href="/blog">Read project updates <span aria-hidden="true">↗</span></Link>
             </div>
             <p className="goal-note"><span>Monthly goal</span> $249 for ten hours of maintenance each week</p>
           </div>
@@ -309,9 +287,7 @@ export default function Home() {
                 a funded plan or a backup maintainer. I want to make sure the work
                 doesn’t go dark again.
               </p>
-              <a className="inline-link" href="https://github.com/servo/rust-smallvec" target="_blank" rel="noreferrer">
-                Follow the repository <ArrowUpRight />
-              </a>
+              <Link className="inline-link" href="/blog">Read project updates <ArrowUpRight /></Link>
             </div>
           </div>
         </section>
@@ -503,11 +479,11 @@ export default function Home() {
       </main>
 
       <footer className="site-footer section-wrap">
-        <a className="wordmark" href="#top" aria-label="SmallVec home">
+        <Link className="wordmark" href="/" aria-label="SmallVec home">
           <span className="wordmark-icon" aria-hidden="true"><span /><span /><span /><span /></span>
           <span>smallvec</span>
-        </a>
-        <p>SmallVec is open source. <a href="https://github.com/servo/rust-smallvec" target="_blank" rel="noreferrer">Explore the code <ArrowUpRight /></a></p>
+        </Link>
+        <p>SmallVec is open source. <Link href="/blog">Read project updates <ArrowUpRight /></Link></p>
         <a className="back-to-top" href="#top">Back to top ↑</a>
       </footer>
     </>

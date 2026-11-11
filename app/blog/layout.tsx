@@ -8,10 +8,19 @@ export default function BlogLayout({ children }: Readonly<{ children: React.Reac
           <span className="wordmark-icon" aria-hidden="true"><span /><span /><span /><span /></span>
           <span>smallvec</span>
         </Link>
-        <nav className="blog-nav" aria-label="Blog navigation">
-          <Link href="/">Home</Link>
-          <Link href="/blog">Blog</Link>
+        <nav className="header-nav" aria-label="Main navigation">
+          <div className="header-nav-links">
+            <Link href="/">Home</Link>
+            <Link href="/blog">Blog</Link>
+          </div>
         </nav>
+        <a className="nav-sponsor" href="https://github.com/sponsors/smallvec" target="_blank" rel="noreferrer">
+          <span className="nav-sponsor-full">Sponsor SmallVec</span>
+          <span className="nav-sponsor-short">Sponsor</span>
+          <svg aria-hidden="true" viewBox="0 0 16 16" fill="none">
+            <path d="M4 12 12 4M5 4h7v7" stroke="currentColor" strokeWidth="1.5" />
+          </svg>
+        </a>
       </header>
       {children}
       <footer className="blog-footer section-wrap">
