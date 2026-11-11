@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const smallvecSponsorUrl = "https://github.com/sponsors/smallvec";
 const alejandroSponsorUrl = "https://github.com/sponsors/alejandro-vaz";
@@ -11,6 +12,7 @@ const navigationItems = [
   { label: "People", href: "#contributors" },
   { label: "Funding", href: "#funding" },
   { label: "FAQ", href: "#faq" },
+  { label: "Blog", href: "/blog", route: true },
   { label: "Docs", href: "https://docs.rs/smallvec/latest/smallvec/", external: true },
 ] as const;
 
@@ -116,6 +118,8 @@ function NavigationLinks({ className }: { className: string }) {
           <a href={item.href} key={item.href} target="_blank" rel="noreferrer">
             {item.label} <ArrowUpRight />
           </a>
+        ) : "route" in item ? (
+          <Link href={item.href} key={item.href}>{item.label}</Link>
         ) : (
           <a href={item.href} key={item.href}>{item.label}</a>
         ),
