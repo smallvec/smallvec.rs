@@ -3,11 +3,6 @@ import Link from "next/link";
 
 const smallvecSponsorUrl = "https://github.com/sponsors/smallvec";
 const alejandroSponsorUrl = "https://github.com/sponsors/alejandro-vaz";
-const navigationItems = [
-  { label: "Home", href: "/" },
-  { label: "Blog", href: "/blog" },
-] as const;
-
 const smallvecPeople = [
   {
     handle: "alejandro-vaz",
@@ -102,14 +97,6 @@ function ArrowUpRight() {
   );
 }
 
-function NavigationLinks({ className }: { className: string }) {
-  return (
-    <div className={className}>
-      {navigationItems.map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}
-    </div>
-  );
-}
-
 function GitHubMark() {
   return (
     <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
@@ -132,9 +119,6 @@ export default function Home() {
           <span>smallvec</span>
         </Link>
 
-        <nav className="header-nav" aria-label="Main navigation">
-          <NavigationLinks className="header-nav-links" />
-        </nav>
         <a className="nav-sponsor" href={smallvecSponsorUrl} target="_blank" rel="noreferrer">
           <span className="nav-sponsor-full">Sponsor SmallVec</span>
           <span className="nav-sponsor-short">Sponsor</span>
@@ -158,7 +142,6 @@ export default function Home() {
               <a className="button button-primary" href={smallvecSponsorUrl} target="_blank" rel="noreferrer">
                 <GitHubMark /> Support SmallVec maintenance <ArrowUpRight />
               </a>
-              <Link className="text-link" href="/blog">Read project updates <span aria-hidden="true">↗</span></Link>
             </div>
             <p className="goal-note"><span>Monthly goal</span> $249 for ten hours of maintenance each week</p>
           </div>
@@ -287,7 +270,6 @@ export default function Home() {
                 a funded plan or a backup maintainer. I want to make sure the work
                 doesn’t go dark again.
               </p>
-              <Link className="inline-link" href="/blog">Read project updates <ArrowUpRight /></Link>
             </div>
           </div>
         </section>
@@ -483,7 +465,6 @@ export default function Home() {
           <span className="wordmark-icon" aria-hidden="true"><span /><span /><span /><span /></span>
           <span>smallvec</span>
         </Link>
-        <p>SmallVec is open source. <Link href="/blog">Read project updates <ArrowUpRight /></Link></p>
         <a className="back-to-top" href="#top">Back to top ↑</a>
       </footer>
     </>
