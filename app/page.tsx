@@ -166,13 +166,13 @@ export default function Home() {
 
         <section className="stats-strip" id="impact" aria-label="SmallVec usage statistics">
           <div className="stats-inner">
-            <div className="stat-item"><strong>1.4<span>B</span></strong><span>downloads overall</span></div>
-            <div className="stat-item"><strong>150<span>k</span></strong><span>dependent crates</span></div>
+            <div className="stat-item"><strong>1.5<span>B</span></strong><span>downloads overall</span></div>
+            <div className="stat-item"><strong>160<span>k</span></strong><span>dependent crates</span></div>
             <div className="stat-item"><strong>40<span>%</span></strong><span>of the Rust ecosystem</span></div>
-            <div className="stat-item"><strong>370<span>M</span></strong><span>downloads in 90 days</span></div>
+            <div className="stat-item"><strong>410<span>M</span></strong><span>downloads in the last 90 days</span></div>
           </div>
           <p className="stats-source">
-            Figures as of October 2026. Download counts: <a href="https://crates.io/crates/smallvec" target="_blank" rel="noreferrer">crates.io</a>.
+            Figures as of November 2026. Download counts: <a href="https://crates.io/crates/smallvec" target="_blank" rel="noreferrer">crates.io</a>.
             Dependent crate count and ecosystem share: <a href="https://lib.rs/crates/smallvec" target="_blank" rel="noreferrer">lib.rs</a>.
           </p>
         </section>
