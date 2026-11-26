@@ -44,16 +44,6 @@ const smallvecPeople = [
     responsibility: "security",
   },
   {
-    handle: "bolshoytoster",
-    name: "bolshoytoster",
-    role: "Contributor · Issue triage",
-    initials: "BT",
-    href: "https://github.com/bolshoytoster",
-    action: "View GitHub profile",
-    group: "contributors",
-    responsibility: "triage",
-  },
-  {
     handle: "GauravPawar101",
     name: "Gaurav Pawar",
     role: "Contributor · Issue triage",
@@ -375,10 +365,10 @@ export default function Home() {
                 ))}
               </div>
             </section>
-            <section className="contributor-group" aria-labelledby="core-contributors-title">
+            <section className="contributor-group" aria-labelledby="members-title">
               <div className="contributor-group-heading">
-                <h3 id="core-contributors-title">Core contributors</h3>
-                <p>The five v2 core contributors, ordered by their areas of responsibility.</p>
+                <h3 id="members-title">Members</h3>
+                <p>People contributing to SmallVec’s development and maintenance.</p>
               </div>
               <div className="contributors-grid contributors-grid-community">
                 {contributorPeople.map((contributor) => (
@@ -464,10 +454,6 @@ export default function Home() {
               <details className="faq-item">
                 <summary>What am I funding?</summary>
                 <p>Issue triage, reviews, testing, security fixes, and releases. The first $250 monthly goal funds ten hours of maintenance each week; the current $500 goal would help afford a second maintainer.</p>
-              </details>
-              <details className="faq-item">
-                <summary>Can sponsorship influence the roadmap?</summary>
-                <p>Sponsors receive priority support for questions, but roadmap decisions stay maintainer-led. Sponsorship does not buy roadmap control or guaranteed prioritization of feature requests.</p>
               </details>
             </div>
           </div>
