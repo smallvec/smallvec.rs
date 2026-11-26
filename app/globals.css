@@ -417,7 +417,7 @@ h1 em, h2 em {
 .project-sponsors-section { padding-top: 58px; padding-bottom: 0; }
 .project-sponsors-heading { margin-bottom: 18px; }
 .project-sponsors-heading .eyebrow { margin-bottom: 10px; }
-.project-sponsors-heading h2 { margin: 0; font-size: clamp(24px, 3vw, 34px); line-height: 1.1; }
+.project-sponsors-heading h2 { margin: 0; font-size: clamp(36px, 4vw, 48px); line-height: 1.05; }
 .project-sponsors-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .project-sponsor-card { min-height: 100px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px; border: 1px solid var(--line); border-radius: 4px; background: rgba(255, 255, 255, .5); text-decoration: none; transition: border-color .18s ease, background .18s ease; }
 .project-sponsor-card:hover { border-color: #9dad87; background: rgba(255, 255, 255, .8); }
@@ -575,6 +575,7 @@ h1 em, h2 em {
   .contributors-section { padding-top: 56px; }
   .contributors-heading { grid-template-columns: 1fr; gap: 14px; margin-bottom: 23px; }
   .contributors-heading h2 { font-size: 40px; }
+  .project-sponsors-heading h2 { font-size: 40px; }
   .contributor-group-heading { align-items: flex-start; flex-direction: column; gap: 4px; }
   .contributors-grid { grid-template-columns: 1fr; gap: 8px; }
   .contributor-card { min-height: 82px; flex-direction: row; align-items: center; padding: 13px; }

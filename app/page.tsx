@@ -9,7 +9,7 @@ const smallvecPeople = [
     role: "Maintainer",
     initials: "AV",
     href: alejandroSponsorUrl,
-    action: "Sponsor on GitHub",
+    action: "Support SmallVec maintenance",
     group: "leadership",
     responsibility: "maintainer",
   },
@@ -119,8 +119,8 @@ export default function Home() {
         </Link>
 
         <a className="nav-sponsor" href={alejandroSponsorUrl} target="_blank" rel="noreferrer">
-          <span className="nav-sponsor-full">Sponsor Alejandro</span>
-          <span className="nav-sponsor-short">Sponsor</span>
+          <span className="nav-sponsor-full">Support SmallVec maintenance</span>
+          <span className="nav-sponsor-short">Support</span>
           <ArrowUpRight />
         </a>
       </header>
@@ -442,7 +442,7 @@ export default function Home() {
               <a className="button button-light" href={alejandroSponsorUrl} target="_blank" rel="noreferrer">
                 <GitHubMark /> Support SmallVec maintenance <ArrowUpRight />
               </a>
-              <span className="github-handle">Supporting <strong>SmallVec maintenance by Alejandro</strong></span>
+              <span className="github-handle">Supporting <strong>SmallVec maintenance</strong></span>
             </div>
             <span className="funding-decoration" aria-hidden="true">✳</span>
           </div>
@@ -455,7 +455,7 @@ export default function Home() {
             <div className="faq-list">
               <details className="faq-item">
                 <summary>Who receives the money?</summary>
-                <p>Your sponsorship goes to Alejandro through GitHub Sponsors and supports the crate’s ongoing maintenance. Alejandro leads this work as SmallVec’s maintainer.</p>
+                <p>Sponsorship is processed through Alejandro’s GitHub Sponsors page and supports the crate’s ongoing maintenance. Alejandro leads this work as SmallVec’s maintainer.</p>
               </details>
               <details className="faq-item">
                 <summary>Can I give once?</summary>
