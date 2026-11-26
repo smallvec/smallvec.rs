@@ -325,7 +325,7 @@ export default function Home() {
               <p className="eyebrow">Monthly funding goals</p>
               <h2 id="goals-title">What each goal <em>makes possible.</em></h2>
             </div>
-            <ol className="goals-timeline" aria-label="SmallVec monthly funding goals and undiscovered future milestones">
+            <ol className="goals-timeline" aria-label="SmallVec monthly funding goals">
               <li className="goal-step goal-step-complete">
                 <span className="goal-marker" aria-hidden="true" />
                 <span className="goal-stage">Goal reached</span>
@@ -350,10 +350,8 @@ export default function Home() {
                 <h3 className="goal-amount">$1,750<span>/ month</span></h3>
                 <p>Start a security vulnerability bug bounty program.</p>
               </li>
-              <li className="goal-step goal-step-undiscovered">
+              <li className="goal-step goal-step-undiscovered" aria-hidden="true">
                 <span className="goal-marker" aria-hidden="true" />
-                <span className="goal-stage">Undiscovered</span>
-                <p>Future milestones are yet to be decided.</p>
               </li>
             </ol>
           </div>
