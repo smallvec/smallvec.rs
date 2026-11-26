@@ -299,6 +299,11 @@ h1 em, h2 em {
 .stat-item strong span { font-size: 20px; }
 .stat-item > span { color: #6c776e; font-size: 10px; }
 
+.testimonial-section { display: grid; grid-template-columns: minmax(220px, .7fr) minmax(0, 1.3fr); align-items: center; gap: 52px; padding-block: 64px; }
+.testimonial-heading .eyebrow { margin-bottom: 14px; }
+.testimonial-heading h2 { font-size: clamp(36px, 4vw, 48px); line-height: 1.08; }
+.testimonial-quote { max-width: none; }
+
 .use-section { padding-block: 48px; }
 .use-section-highlight { background: var(--paper-deep); border-block: 1px solid #e2e4db; }
 .use-inner { display: grid; gap: 25px; }
@@ -546,6 +551,7 @@ h1 em, h2 em {
   .stat-item { min-height: 79px; padding-left: 16px; }
   .stat-item:nth-child(odd) { padding-left: 0; border-left: 0; }
   .stat-item strong { font-size: 26px; }
+  .testimonial-section { grid-template-columns: 1fr; gap: 24px; padding-block: 48px; }
   .story-section { padding-top: 62px; padding-bottom: 65px; }
   .section-heading h2,
   .work-intro h2,

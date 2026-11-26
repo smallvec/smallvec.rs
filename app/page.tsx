@@ -175,6 +175,28 @@ export default function Home() {
           </p>
         </section>
 
+        <section className="testimonial-section section-wrap" aria-labelledby="testimonial-title">
+          <div className="testimonial-heading">
+            <p className="eyebrow">Testimonials</p>
+            <h2 id="testimonial-title">Why SmallVec matters.</h2>
+          </div>
+          <figure className="hero-quote testimonial-quote">
+            <p className="hero-quote-label">From the Rust Foundation funding team</p>
+            <blockquote>
+              <p>
+                SmallVec is amongst the 30 most downloaded crates on <a href="https://crates.io/" target="_blank" rel="noreferrer">crates.io</a>. It implements a very useful data structure, which we use in many places in the Rust compiler to improve its performance.
+              </p>
+              <p>
+                Due to its low-level nature, the crate contains unsafe code, which needs to be properly maintained and reviewed. It is also important to promptly resolve any potential security vulnerabilities found in such code.
+              </p>
+            </blockquote>
+            <figcaption>
+              <cite>Jakub Beránek</cite>
+              <span>Funding team, Rust Foundation</span>
+            </figcaption>
+          </figure>
+        </section>
+
         <section className="use-section use-section-highlight" id="uses" aria-labelledby="uses-title">
           <div className="section-wrap use-inner">
             <div className="use-heading">
