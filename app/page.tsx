@@ -241,8 +241,7 @@ export default function Home() {
               </article>
               <article className="use-card">
                 <div className="use-logo-row use-logo-row-hyper" aria-hidden="true">
-                  <Image src="/rust.svg" alt="" width={36} height={36} />
-                  <span>hyper</span>
+                  <Image src="/hyperium-logo.png" alt="" width={48} height={48} />
                 </div>
                 <div className="use-card-copy">
                   <span className="use-category">Rust web servers</span>
