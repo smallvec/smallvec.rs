@@ -1,12 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const smallvecSponsorUrl = "https://github.com/sponsors/smallvec";
 const alejandroSponsorUrl = "https://github.com/sponsors/alejandro-vaz";
 const smallvecPeople = [
   {
     handle: "alejandro-vaz",
-    name: "Alejandro",
+    name: "Alejandro Vaz",
     role: "Maintainer",
     initials: "AV",
     href: alejandroSponsorUrl,
@@ -119,8 +118,8 @@ export default function Home() {
           <span>smallvec</span>
         </Link>
 
-        <a className="nav-sponsor" href={smallvecSponsorUrl} target="_blank" rel="noreferrer">
-          <span className="nav-sponsor-full">Sponsor SmallVec</span>
+        <a className="nav-sponsor" href={alejandroSponsorUrl} target="_blank" rel="noreferrer">
+          <span className="nav-sponsor-full">Sponsor Alejandro</span>
           <span className="nav-sponsor-short">Sponsor</span>
           <ArrowUpRight />
         </a>
@@ -139,7 +138,7 @@ export default function Home() {
               help sustain this work.
             </p>
             <div className="hero-actions">
-              <a className="button button-primary" href={smallvecSponsorUrl} target="_blank" rel="noreferrer">
+              <a className="button button-primary" href={alejandroSponsorUrl} target="_blank" rel="noreferrer">
                 <GitHubMark /> Support SmallVec maintenance <ArrowUpRight />
               </a>
             </div>
@@ -404,6 +403,23 @@ export default function Home() {
           <p className="contributors-source">See the v2 core contributor listing in the <a href="https://github.com/servo/rust-smallvec#v2-core-contributors" target="_blank" rel="noreferrer">SmallVec repository README <ArrowUpRight /></a>.</p>
         </section>
 
+        <section className="project-sponsors-section section-wrap" aria-labelledby="project-sponsors-title">
+          <div className="project-sponsors-heading">
+            <p className="eyebrow">Current sponsors</p>
+            <h2 id="project-sponsors-title">Thank you for supporting SmallVec.</h2>
+          </div>
+          <div className="project-sponsors-grid">
+            <a className="project-sponsor-card" href="https://servo.org/" target="_blank" rel="noreferrer">
+              <strong>Servo</strong>
+              <span>Visit website <ArrowUpRight /></span>
+            </a>
+            <a className="project-sponsor-card" href="https://thanks.dev/" target="_blank" rel="noreferrer">
+              <strong>thanks.dev</strong>
+              <span>Visit website <ArrowUpRight /></span>
+            </a>
+          </div>
+        </section>
+
         <section className="funding-section section-wrap" id="funding">
           <div className="funding-card">
             <div className="funding-copy">
@@ -424,10 +440,10 @@ export default function Home() {
                 </ul>
               </div>
               <p>Reaching this goal would let the maintainer dedicate ten hours each week to SmallVec maintenance, security fixes, reviews, testing, and releases.</p>
-              <a className="button button-light" href={smallvecSponsorUrl} target="_blank" rel="noreferrer">
+              <a className="button button-light" href={alejandroSponsorUrl} target="_blank" rel="noreferrer">
                 <GitHubMark /> Support SmallVec maintenance <ArrowUpRight />
               </a>
-              <span className="github-handle">Supporting <strong>the SmallVec organization</strong></span>
+              <span className="github-handle">Supporting <strong>SmallVec maintenance by Alejandro</strong></span>
             </div>
             <span className="funding-decoration" aria-hidden="true">✳</span>
           </div>
@@ -440,7 +456,7 @@ export default function Home() {
             <div className="faq-list">
               <details className="faq-item">
                 <summary>Who receives the money?</summary>
-                <p>Your sponsorship goes to the SmallVec organization through GitHub Sponsors and supports the crate’s ongoing maintenance. Alejandro leads this work as SmallVec’s maintainer.</p>
+                <p>Your sponsorship goes to Alejandro through GitHub Sponsors and supports the crate’s ongoing maintenance. Alejandro leads this work as SmallVec’s maintainer.</p>
               </details>
               <details className="faq-item">
                 <summary>Can I give once?</summary>

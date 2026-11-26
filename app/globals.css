@@ -411,6 +411,17 @@ h1 em, h2 em {
 .contributors-source a:hover { color: #597c32; }
 .contributors-source { display: flex; align-items: center; gap: 4px; margin: 17px 0 0; color: #849087; font-size: 9px; }
 
+.project-sponsors-section { padding-top: 58px; padding-bottom: 0; }
+.project-sponsors-heading { margin-bottom: 18px; }
+.project-sponsors-heading .eyebrow { margin-bottom: 10px; }
+.project-sponsors-heading h2 { margin: 0; font-size: clamp(24px, 3vw, 34px); line-height: 1.1; }
+.project-sponsors-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.project-sponsor-card { min-height: 100px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px; border: 1px solid var(--line); border-radius: 4px; background: rgba(255, 255, 255, .5); text-decoration: none; transition: border-color .18s ease, background .18s ease; }
+.project-sponsor-card:hover { border-color: #9dad87; background: rgba(255, 255, 255, .8); }
+.project-sponsor-card strong { font-size: 18px; letter-spacing: -.4px; }
+.project-sponsor-card span { display: inline-flex; align-items: center; gap: 6px; color: var(--green-dark); font-size: 10px; font-weight: 700; }
+.project-sponsor-card svg { width: 12px; height: 12px; }
+
 .funding-section { padding-top: 72px; padding-bottom: 72px; }
 .funding-card {
   position: relative;
@@ -566,6 +577,10 @@ h1 em, h2 em {
   .contributor-card { min-height: 82px; flex-direction: row; align-items: center; padding: 13px; }
   .contributor-link { flex: 0 0 auto; padding-top: 0; margin-left: 10px; font-size: 9px; }
   .contributors-source { align-items: flex-start; flex-wrap: wrap; line-height: 1.6; }
+
+  .project-sponsors-section { padding-top: 48px; }
+  .project-sponsors-grid { grid-template-columns: 1fr; gap: 8px; }
+  .project-sponsor-card { min-height: 76px; padding: 15px; }
 
   .funding-section { padding-top: 52px; padding-bottom: 52px; }
   .funding-card { grid-template-columns: 1fr; gap: 27px; padding: 31px 25px 24px; }
