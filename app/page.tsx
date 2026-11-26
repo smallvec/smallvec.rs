@@ -132,7 +132,7 @@ export default function Home() {
             <h1>Help bring a second maintainer to <em>SmallVec.</em></h1>
             <p className="hero-description">
               SmallVec is used inside the Rust compiler and depended on by more than
-              150,000 crates. The first $250 monthly goal is reached. The next $500
+              160,000 crates. The first $250 monthly goal is reached. The next $500
               goal would help afford a second maintainer. One-time sponsorships are
               appreciated too and help sustain this work.
             </p>
@@ -285,12 +285,13 @@ export default function Home() {
                 <article className="work-card"><strong>&lt;48h</strong><h3>Response time</h3><p>Keeping questions and reviews moving.</p></article>
                 <article className="work-card"><strong>~200</strong><h3>Issues triaged</h3><p>Cleared a backlog that had grown for more than two years.</p></article>
                 <article className="work-card"><strong>~200</strong><h3>PRs merged</h3><p>Total since taking over.</p></article>
+                <article className="work-card"><strong>11</strong><h3>Releases</h3><p>Published since taking over.</p></article>
                 <article className="work-card"><strong>CI + fuzzer</strong><h3>New test infrastructure</h3><p>More coverage and stronger checks.</p></article>
               </div>
               <p className="release-note"><span className="release-icon">✓</span><span><strong>Security fixes shipped.</strong> Several vulnerabilities fixed, with a new fuzzer and CI adding stronger checks.</span></p>
               <p className="release-note"><span className="release-icon">↗</span><span><strong>Releases moving forward.</strong> Managed v1.16 and the v2 release series from alpha.13, with around 75M downloads across those releases.</span></p>
               <p className="work-source">
-                Repository and maintenance figures as of October 2026, from the <a href="https://github.com/servo/rust-smallvec" target="_blank" rel="noreferrer">SmallVec GitHub repository</a>. Release download counts are from <a href="https://crates.io/crates/smallvec" target="_blank" rel="noreferrer">crates.io</a>.
+                Repository and maintenance figures as of November 2026, from the <a href="https://github.com/servo/rust-smallvec" target="_blank" rel="noreferrer">SmallVec GitHub repository</a>. Release download counts are from <a href="https://crates.io/crates/smallvec" target="_blank" rel="noreferrer">crates.io</a>.
               </p>
             </div>
           </div>
