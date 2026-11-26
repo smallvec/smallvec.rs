@@ -102,6 +102,7 @@ svg { display: block; }
   border-radius: 4px;
   white-space: nowrap;
   text-decoration: none;
+  transition: color .18s ease, background .18s ease;
 }
 
 .nav-sponsor:hover { color: var(--green); }
@@ -309,7 +310,7 @@ h1 em, h2 em {
 .use-inner { display: grid; gap: 25px; }
 .use-heading { display: flex; align-items: end; justify-content: space-between; gap: 48px; }
 .use-heading .eyebrow { margin-bottom: 13px; }
-.use-heading h2 { font-size: clamp(32px, 3.8vw, 44px); line-height: 1.08; letter-spacing: -1.6px; }
+.use-heading h2 { font-size: clamp(36px, 4vw, 48px); line-height: 1.05; }
 .use-heading > p { max-width: 470px; margin: 0 0 3px; color: var(--muted); font-size: 12px; line-height: 1.7; }
 .use-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .use-card { min-height: 190px; display: grid; grid-template-columns: 66px minmax(0, 1fr); align-content: start; gap: 0 13px; padding: 18px 16px; border: 1px solid #d3d8ce; border-radius: 4px; background: rgba(255, 255, 255, .45); }
@@ -355,7 +356,7 @@ h1 em, h2 em {
 .work-intro > p:last-child { max-width: 280px; margin: 20px 0 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
 .work-details { padding-top: 4px; }
 .work-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 13px; }
-.work-card { grid-column: span 2; min-height: 170px; padding: 19px 17px; border: 1px solid #d3d8ce; border-radius: 3px; background: rgba(255, 255, 255, .36); }
+.work-card { grid-column: span 2; min-height: 170px; padding: 19px 17px; border: 1px solid #d3d8ce; border-radius: 4px; background: rgba(255, 255, 255, .36); }
 .work-card:nth-last-child(-n+2) { grid-column: span 3; }
 .work-card > strong { display: block; margin-bottom: 17px; color: var(--green-dark); font-family: Georgia, serif; font-size: 31px; font-weight: 400; letter-spacing: -1px; }
 .work-card h3 { margin-bottom: 7px; font-size: 12px; font-weight: 700; }
@@ -508,12 +509,11 @@ h1 em, h2 em {
   .hero-quote { padding-left: 23px; }
   .story-content { margin-left: 18%; gap: 50px; }
   .work-inner { gap: 45px; }
-  .use-grid { gap: 8px; }
+  .use-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
   .use-card { grid-template-columns: 66px minmax(0, 1fr); gap: 0 9px; padding: 15px 12px; }
   .work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .work-grid .work-card,
   .work-card:nth-last-child(-n+2) { grid-column: auto; }
-  .work-grid .work-card:last-child { grid-column: 1 / -1; }
   .contributors-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .contributors-grid-community .contributor-card:nth-last-child(-n+2) { grid-column: auto; }
   .contributors-grid .contributor-card { grid-column: auto; }
