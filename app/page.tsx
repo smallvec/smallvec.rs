@@ -129,20 +129,19 @@ export default function Home() {
         <section className="hero section-wrap" id="top">
           <div className="hero-copy">
             <p className="eyebrow"><span className="status-dot" /> Open source, maintained in the open</p>
-            <h1>Help fund ten hours a week of <em>SmallVec maintenance.</em></h1>
+            <h1>Help bring a second maintainer to <em>SmallVec.</em></h1>
             <p className="hero-description">
               SmallVec is used inside the Rust compiler and depended on by more than
-              150,000 crates. Reaching the $250 monthly goal would let the maintainer
-              dedicate ten hours each week to maintenance, security fixes, reviews,
-              testing, and releases. One-time sponsorships are appreciated too and
-              help sustain this work.
+              150,000 crates. The first $250 monthly goal is reached. The next $500
+              goal would help afford a second maintainer. One-time sponsorships are
+              appreciated too and help sustain this work.
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href={alejandroSponsorUrl} target="_blank" rel="noreferrer">
                 <GitHubMark /> Support SmallVec maintenance <ArrowUpRight />
               </a>
             </div>
-            <p className="goal-note"><span>Monthly goal</span> $250 for ten hours of maintenance each week</p>
+            <p className="goal-note"><span>Next monthly goal</span> $500 to afford a second maintainer</p>
           </div>
 
           <figure className="hero-quote">
@@ -304,15 +303,15 @@ export default function Home() {
               <h2 id="goals-title">What each goal <em>makes possible.</em></h2>
             </div>
             <ol className="goals-timeline" aria-label="SmallVec monthly sponsorship milestones">
-              <li className="goal-step goal-step-current">
+              <li className="goal-step goal-step-complete">
                 <span className="goal-marker" aria-hidden="true" />
-                <span className="goal-stage">Current goal</span>
+                <span className="goal-stage">Goal reached</span>
                 <h3 className="goal-amount">$250<span>/ month</span></h3>
                 <p>10 hours of maintenance work each week.</p>
               </li>
-              <li className="goal-step">
+              <li className="goal-step goal-step-current">
                 <span className="goal-marker" aria-hidden="true" />
-                <span className="goal-stage">Next milestone</span>
+                <span className="goal-stage">Current goal</span>
                 <h3 className="goal-amount">$500<span>/ month</span></h3>
                 <p>Afford a second maintainer.</p>
               </li>
@@ -429,7 +428,7 @@ export default function Home() {
             </div>
             <div className="funding-ask">
               <span className="ask-label">MONTHLY GOAL</span>
-              <div className="ask-amount">$250<span>/ month</span></div>
+              <div className="ask-amount">$500<span>/ month</span></div>
               <div className="ask-rule" />
               <div className="sponsor-benefits">
                 <h3>Sponsor benefits</h3>
@@ -439,7 +438,7 @@ export default function Home() {
                   <li>Monthly email updates</li>
                 </ul>
               </div>
-              <p>Reaching this goal would let the maintainer dedicate ten hours each week to SmallVec maintenance, security fixes, reviews, testing, and releases.</p>
+              <p>The first $250 monthly goal is reached. This next goal would help afford a second maintainer.</p>
               <a className="button button-light" href={alejandroSponsorUrl} target="_blank" rel="noreferrer">
                 <GitHubMark /> Support SmallVec maintenance <ArrowUpRight />
               </a>
@@ -460,11 +459,11 @@ export default function Home() {
               </details>
               <details className="faq-item">
                 <summary>Can I give once?</summary>
-                <p>Yes—one-time sponsorships are appreciated. Choose the one-time option on GitHub Sponsors; monthly support contributes to the $250 goal for dedicated maintenance time.</p>
+                <p>Yes—one-time sponsorships are appreciated. Choose the one-time option on GitHub Sponsors; monthly support contributes to the current $500 goal to help afford a second maintainer.</p>
               </details>
               <details className="faq-item">
                 <summary>What am I funding?</summary>
-                <p>Issue triage, reviews, testing, security fixes, and releases. Reaching the $250 monthly goal would let Alejandro dedicate ten hours each week to this work.</p>
+                <p>Issue triage, reviews, testing, security fixes, and releases. The first $250 monthly goal funds ten hours of maintenance each week; the current $500 goal would help afford a second maintainer.</p>
               </details>
               <details className="faq-item">
                 <summary>Can sponsorship influence the roadmap?</summary>
