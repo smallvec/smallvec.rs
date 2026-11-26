@@ -371,7 +371,7 @@ h1 em, h2 em {
 .goals-heading .eyebrow { margin-bottom: 14px; }
 .goals-heading h2 { font-size: clamp(36px, 4vw, 48px); line-height: 1.08; }
 .goals-heading h2 em { color: var(--green-dark); }
-.goals-timeline { position: relative; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 19px; margin: 38px 0 0; padding: 0; list-style: none; }
+.goals-timeline { position: relative; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 19px; max-width: 1000px; margin: 38px auto 0; padding: 0; list-style: none; }
 .goals-timeline::before { position: absolute; top: 8px; right: 14%; left: 8px; height: 1px; background: linear-gradient(to right, #b8c1b5 0%, #b8c1b5 78%, rgba(184, 193, 181, .12) 100%); content: ""; }
 .goal-step { position: relative; padding-top: 29px; }
 .goal-marker { position: absolute; z-index: 1; top: 0; left: 0; width: 17px; height: 17px; border: 1px solid #89998a; border-radius: 50%; background: var(--paper-deep); }
