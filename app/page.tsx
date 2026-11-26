@@ -73,6 +73,16 @@ const smallvecPeople = [
     group: "contributors",
     responsibility: "contributor",
   },
+  {
+    handle: "Divyansh089",
+    name: "Divyansh Patel",
+    role: "Member",
+    initials: "DP",
+    href: "https://github.com/Divyansh089",
+    action: "View GitHub profile",
+    group: "contributors",
+    responsibility: "contributor",
+  },
 ];
 
 const leadershipPeople = smallvecPeople.filter((person) => person.group === "leadership");
@@ -272,7 +282,7 @@ export default function Home() {
             <div className="work-details">
               <div className="work-grid">
                 <article className="work-card"><strong>40+</strong><h3>Contributors</h3><p>People now contributing to SmallVec’s ongoing development.</p></article>
-                <article className="work-card"><strong>&lt;24h</strong><h3>Response time</h3><p>Keeping questions and reviews moving.</p></article>
+                <article className="work-card"><strong>&lt;48h</strong><h3>Response time</h3><p>Keeping questions and reviews moving.</p></article>
                 <article className="work-card"><strong>~200</strong><h3>Issues triaged</h3><p>Cleared a backlog that had grown for more than two years.</p></article>
                 <article className="work-card"><strong>~200</strong><h3>PRs merged</h3><p>Total since taking over.</p></article>
                 <article className="work-card"><strong>CI + fuzzer</strong><h3>New test infrastructure</h3><p>More coverage and stronger checks.</p></article>
@@ -307,7 +317,7 @@ export default function Home() {
               </li>
               <li className="goal-step">
                 <span className="goal-marker" aria-hidden="true" />
-                <span className="goal-stage">Future goal</span>
+                <span className="goal-stage">Next goal</span>
                 <h3 className="goal-amount">$1,000<span>/ month</span></h3>
                 <p>Improve work conditions for both maintainers.</p>
               </li>
@@ -423,7 +433,7 @@ export default function Home() {
               <div className="sponsor-benefits">
                 <h3>Sponsor benefits</h3>
                 <ul>
-                  <li>Logo on the SmallVec README</li>
+                  <li>Logo on the SmallVec website and crates.io README</li>
                   <li>Priority support</li>
                   <li>Monthly email updates</li>
                 </ul>
