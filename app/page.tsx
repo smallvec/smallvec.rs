@@ -432,13 +432,24 @@ export default function Home() {
           </div>
           <div className="project-sponsors-grid">
             <a className="project-sponsor-card" href="https://servo.org/" target="_blank" rel="noreferrer">
-              <strong>Servo</strong>
+              <div className="project-sponsor-brand">
+                <Image src="/servo-logo.svg" alt="Servo" width={284} height={63} />
+              </div>
               <span>Visit website <ArrowUpRight /></span>
             </a>
             <a className="project-sponsor-card" href="https://thanks.dev/" target="_blank" rel="noreferrer">
-              <strong>thanks.dev</strong>
+              <div className="project-sponsor-brand project-sponsor-brand-thanks">
+                <Image src="/thanks-dev-icon.png" alt="" width={72} height={72} />
+                <strong>thanks.dev</strong>
+              </div>
               <span>Visit website <ArrowUpRight /></span>
             </a>
+            <div className="project-sponsor-card">
+              <div className="project-sponsor-brand project-sponsor-brand-private">
+                <strong>Private sponsor</strong>
+              </div>
+              <span>Supporting SmallVec</span>
+            </div>
           </div>
         </section>
 

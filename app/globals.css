@@ -423,10 +423,14 @@ h1 em, h2 em {
 .project-sponsors-heading { margin-bottom: 18px; }
 .project-sponsors-heading .eyebrow { margin-bottom: 10px; }
 .project-sponsors-heading h2 { margin: 0; font-size: clamp(36px, 4vw, 48px); line-height: 1.05; }
-.project-sponsors-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-.project-sponsor-card { min-height: 100px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px; border: 1px solid var(--line); border-radius: 4px; background: rgba(255, 255, 255, .5); text-decoration: none; transition: border-color .18s ease, background .18s ease; }
+.project-sponsors-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.project-sponsor-card { min-height: 190px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between; gap: 18px; padding: 24px; border: 1px solid var(--line); border-radius: 4px; background: rgba(255, 255, 255, .5); text-decoration: none; transition: border-color .18s ease, background .18s ease; }
 .project-sponsor-card:hover { border-color: #9dad87; background: rgba(255, 255, 255, .8); }
-.project-sponsor-card strong { font-size: 18px; letter-spacing: -.4px; }
+.project-sponsor-brand { width: 100%; min-height: 100px; display: flex; align-items: center; gap: 14px; }
+.project-sponsor-brand img { display: block; max-width: 100%; height: auto; object-fit: contain; }
+.project-sponsor-brand-thanks img { width: 72px; height: 72px; flex: 0 0 auto; }
+.project-sponsor-brand strong { font-size: 24px; letter-spacing: -.6px; }
+.project-sponsor-brand-private strong { font-size: 21px; letter-spacing: -.4px; }
 .project-sponsor-card span { display: inline-flex; align-items: center; gap: 6px; color: var(--green-dark); font-size: 10px; font-weight: 700; }
 .project-sponsor-card svg { width: 12px; height: 12px; }
 
@@ -590,7 +594,7 @@ h1 em, h2 em {
 
   .project-sponsors-section { padding-top: 48px; }
   .project-sponsors-grid { grid-template-columns: 1fr; gap: 8px; }
-  .project-sponsor-card { min-height: 76px; padding: 15px; }
+  .project-sponsor-card { min-height: 150px; padding: 20px; }
 
   .funding-section { padding-top: 52px; padding-bottom: 52px; }
   .funding-card { grid-template-columns: 1fr; gap: 27px; padding: 31px 25px 24px; }
