@@ -271,23 +271,16 @@ export default function Home() {
             </div>
             <div className="story-text">
               <p>
-                Matt had less time to maintain SmallVec starting around 2023. In
-                September 2025, he <a href="https://github.com/servo/rust-smallvec/issues/395" target="_blank" rel="noreferrer">asked for another active maintainer</a>,
-                explaining that he had not been able to give the crate the time it
-                deserved and that some pull requests were long delayed. He planned to
-                keep maintaining it until he could hand it off. From November 2025 to
-                August 2026, the repository was nearly inactive. There was no funded
-                maintenance plan or backup maintainer to take over. The backlog grew,
-                security fixes needed attention, and SmallVec’s API fell behind <code>Vec</code>
-                in completeness.
+                I'm Alejandro, I'm the maintainer of SmallVec, a widely used Rust crate with 1.5B downloads and more than 160k dependents used by 40% of all the crates on the ecosystem. Although it is so widespread, SmallVec is one of those pieces of invisible foundational infrastructure that sits at the bottom of dependency graphs unattended.
               </p>
               <p>
-                I’m Alejandro, SmallVec’s current maintainer. I took over in August
-                2026, after months of near-total inactivity. Since then, issues have
-                been triaged, PRs reviewed, security fixes shipped, and releases
-                managed. There is still a lot to do. SmallVec’s reach did not come with
-                a funded plan or a backup maintainer. I want to make sure the work
-                doesn’t go dark again.
+                SmallVec recently went through a 10-month period practically abandoned and without maintainer, time in which some security vulnerabilities appeared and the data structure fell behind the standard library API parity whilst the backlog of PRs and issues reached just over two years.
+              </p>
+              <p>
+                I'm its new maintainer and my goal is to make SmallVec financially sustainable long-term so this critical piece of Rust infrastructure doesn't go unmaintained.
+              </p>
+              <p>
+                Our current goal is to raise $500/month, which would allow us to afford a second maintainer keeping SmallVec afloat.
               </p>
             </div>
           </div>
